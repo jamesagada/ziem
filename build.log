@@ -1,0 +1,1770 @@
+[INFO] Scanning for projects...
+[INFO] mixin-maven-plugin: Merging Mixins
+[INFO] mixin-maven-plugin: Mixins were merged
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] SimpleApp Parent
+[INFO] SimpleApp Simple Module
+[INFO] SimpleApp Ziem Module
+[INFO] SimpleApp Application
+[INFO] SimpleApp Webapp
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building SimpleApp Parent 1.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ ziemozi ---
+[INFO] Deleting /Users/jamesagada/Development/isis/ziemozi/target
+[INFO] 
+[INFO] --- maven-jar-plugin:2.4:test-jar (package-test-jar) @ ziemozi ---
+[WARNING] JAR will be empty - no content was marked for inclusion!
+[INFO] Building jar: /Users/jamesagada/Development/isis/ziemozi/target/ziemozi-1.0-SNAPSHOT-tests.jar
+[INFO] 
+[INFO] --- maven-install-plugin:2.5.1:install (default-install) @ ziemozi ---
+[INFO] Installing /Users/jamesagada/Development/isis/ziemozi/pom.xml to /Users/jamesagada/.m2/repository/com/ziem/ziemozi/1.0-SNAPSHOT/ziemozi-1.0-SNAPSHOT.pom
+[INFO] Installing /Users/jamesagada/Development/isis/ziemozi/target/ziemozi-1.0-SNAPSHOT-tests.jar to /Users/jamesagada/.m2/repository/com/ziem/ziemozi/1.0-SNAPSHOT/ziemozi-1.0-SNAPSHOT-tests.jar
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building SimpleApp Simple Module 1.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ ziemozi-module-simple ---
+[INFO] Deleting /Users/jamesagada/Development/isis/ziemozi/module-simple/target
+[INFO] 
+[INFO] --- maven-enforcer-plugin:1.4.1:enforce (validate-enforce) @ ziemozi-module-simple ---
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ ziemozi-module-simple ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /Users/jamesagada/Development/isis/ziemozi/module-simple/src/main/resources
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ ziemozi-module-simple ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 9 source files to /Users/jamesagada/Development/isis/ziemozi/module-simple/target/classes
+DataNucleus : JDO Query - domainapp.modules.simple.dom.impl.SimpleObject -> domainapp.modules.simple.dom.impl.QSimpleObject
+[WARNING] /Users/jamesagada/Development/isis/ziemozi/module-simple/src/main/java/domainapp/modules/simple/dom/impl/SimpleObject.java: /Users/jamesagada/Development/isis/ziemozi/module-simple/src/main/java/domainapp/modules/simple/dom/impl/SimpleObject.java uses or overrides a deprecated API.
+[WARNING] /Users/jamesagada/Development/isis/ziemozi/module-simple/src/main/java/domainapp/modules/simple/dom/impl/SimpleObject.java: Recompile with -Xlint:deprecation for details.
+[WARNING] /Users/jamesagada/Development/isis/ziemozi/module-simple/target/generated-sources/annotations/domainapp/modules/simple/dom/impl/QSimpleObject.java: /Users/jamesagada/Development/isis/ziemozi/module-simple/target/generated-sources/annotations/domainapp/modules/simple/dom/impl/QSimpleObject.java uses unchecked or unsafe operations.
+[WARNING] /Users/jamesagada/Development/isis/ziemozi/module-simple/target/generated-sources/annotations/domainapp/modules/simple/dom/impl/QSimpleObject.java: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] --- datanucleus-maven-plugin:4.0.5:enhance (process-classes) @ ziemozi-module-simple ---
+[INFO]   CP: /Users/jamesagada/.m2/repository/org/datanucleus/datanucleus-maven-plugin/4.0.5/datanucleus-maven-plugin-4.0.5.jar
+[INFO]   CP: /Users/jamesagada/.m2/repository/org/datanucleus/datanucleus-core/4.1.7/datanucleus-core-4.1.7.jar
+[INFO]   CP: /Users/jamesagada/.m2/repository/org/datanucleus/datanucleus-api-jdo/4.1.1/datanucleus-api-jdo-4.1.1.jar
+[INFO]   CP: /Users/jamesagada/.m2/repository/org/datanucleus/datanucleus-jodatime/4.1.0-release/datanucleus-jodatime-4.1.0-release.jar
+[INFO]   CP: /Users/jamesagada/.m2/repository/org/codehaus/plexus/plexus-utils/3.0.8/plexus-utils-3.0.8.jar
+[INFO]   CP: /Users/jamesagada/.m2/repository/org/codehaus/plexus/plexus-component-annotations/1.5.5/plexus-component-annotations-1.5.5.jar
+[INFO]   CP: /Users/jamesagada/.m2/repository/org/sonatype/sisu/sisu-inject-bean/2.3.0/sisu-inject-bean-2.3.0.jar
+[INFO]   CP: /Users/jamesagada/.m2/repository/org/sonatype/sisu/sisu-guice/3.1.0/sisu-guice-3.1.0-no_aop.jar
+[INFO]   CP: /Users/jamesagada/.m2/repository/org/sonatype/sisu/sisu-guava/0.9.9/sisu-guava-0.9.9.jar
+[INFO]   CP: /Users/jamesagada/.m2/repository/org/apache/xbean/xbean-reflect/3.4/xbean-reflect-3.4.jar
+[INFO]   CP: /Users/jamesagada/.m2/repository/log4j/log4j/1.2.12/log4j-1.2.12.jar
+[INFO]   CP: /Users/jamesagada/.m2/repository/commons-logging/commons-logging-api/1.1/commons-logging-api-1.1.jar
+[INFO]   CP: /Users/jamesagada/.m2/repository/com/google/collections/google-collections/1.0/google-collections-1.0.jar
+[INFO]   CP: /Users/jamesagada/.m2/repository/junit/junit/3.8.2/junit-3.8.2.jar
+[INFO]   CP: /Users/jamesagada/Development/isis/ziemozi/module-simple/target/classes
+[INFO]   CP: /Users/jamesagada/.m2/repository/org/apache/isis/core/isis-core-applib/1.15.0/isis-core-applib-1.15.0.jar
+[INFO]   CP: /Users/jamesagada/.m2/repository/org/apache/isis/core/isis-core-schema/1.15.0/isis-core-schema-1.15.0.jar
+[INFO]   CP: /Users/jamesagada/.m2/repository/joda-time/joda-time/2.9.4/joda-time-2.9.4.jar
+[INFO]   CP: /Users/jamesagada/.m2/repository/org/apache/geronimo/specs/geronimo-atinject_1.0_spec/1.0/geronimo-atinject_1.0_spec-1.0.jar
+[INFO]   CP: /Users/jamesagada/.m2/repository/javax/validation/validation-api/1.1.0.Final/validation-api-1.1.0.Final.jar
+[INFO]   CP: /Users/jamesagada/.m2/repository/org/apache/geronimo/specs/geronimo-jta_1.1_spec/1.1.1/geronimo-jta_1.1_spec-1.1.1.jar
+[INFO]   CP: /Users/jamesagada/.m2/repository/org/apache/geronimo/specs/geronimo-jcdi_1.0_spec/1.0/geronimo-jcdi_1.0_spec-1.0.jar
+[INFO]   CP: /Users/jamesagada/.m2/repository/org/jboss/spec/javax/ws/rs/jboss-jaxrs-api_2.0_spec/1.0.0.Final/jboss-jaxrs-api_2.0_spec-1.0.0.Final.jar
+[INFO]   CP: /Users/jamesagada/.m2/repository/javax/jdo/jdo-api/3.1/jdo-api-3.1.jar
+[INFO]   CP: /Users/jamesagada/.m2/repository/javax/transaction/transaction-api/1.1/transaction-api-1.1.jar
+[INFO]   CP: /Users/jamesagada/.m2/repository/org/datanucleus/datanucleus-jdo-query/4.0.5/datanucleus-jdo-query-4.0.5.jar
+[INFO]   CP: /Users/jamesagada/.m2/repository/org/reflections/reflections/0.9.10/reflections-0.9.10.jar
+[INFO]   CP: /Users/jamesagada/.m2/repository/org/javassist/javassist/3.20.0-GA/javassist-3.20.0-GA.jar
+[INFO]   CP: /Users/jamesagada/.m2/repository/com/google/code/findbugs/annotations/2.0.1/annotations-2.0.1.jar
+[INFO]   CP: /Users/jamesagada/.m2/repository/com/google/guava/guava/19.0/guava-19.0.jar
+[INFO]   CP: /Users/jamesagada/.m2/repository/org/hamcrest/hamcrest-library/1.3/hamcrest-library-1.3.jar
+[INFO]   CP: /Users/jamesagada/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar
+[INFO]   CP: /Users/jamesagada/.m2/repository/org/slf4j/slf4j-api/1.7.21/slf4j-api-1.7.21.jar
+[INFO]   CP: /Users/jamesagada/.m2/repository/org/apache/isis/core/isis-core-log4j/1.15.0/isis-core-log4j-1.15.0.jar
+[INFO]   CP: /Users/jamesagada/.m2/repository/org/apache/isis/core/isis-core-metamodel/1.15.0/isis-core-metamodel-1.15.0.jar
+[INFO]   CP: /Users/jamesagada/.m2/repository/commons-codec/commons-codec/1.10/commons-codec-1.10.jar
+[INFO]   CP: /Users/jamesagada/.m2/repository/commons-cli/commons-cli/1.3.1/commons-cli-1.3.1.jar
+[INFO]   CP: /Users/jamesagada/.m2/repository/com/google/inject/guice/4.1.0/guice-4.1.0.jar
+[INFO]   CP: /Users/jamesagada/.m2/repository/javax/inject/javax.inject/1/javax.inject-1.jar
+[INFO]   CP: /Users/jamesagada/.m2/repository/aopalliance/aopalliance/1.0/aopalliance-1.0.jar
+[INFO]   CP: /Users/jamesagada/.m2/repository/com/google/code/gson/gson/2.7/gson-2.7.jar
+[INFO]   CP: /Users/jamesagada/.m2/repository/org/datanucleus/datanucleus-rdbms/4.1.9/datanucleus-rdbms-4.1.9.jar
+[INFO]   CP: /Users/jamesagada/.m2/repository/io/swagger/swagger-core/1.5.9/swagger-core-1.5.9.jar
+[INFO]   CP: /Users/jamesagada/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.8.0/jackson-annotations-2.8.0.jar
+[INFO]   CP: /Users/jamesagada/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.8.0/jackson-databind-2.8.0.jar
+[INFO]   CP: /Users/jamesagada/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.8.0/jackson-core-2.8.0.jar
+[INFO]   CP: /Users/jamesagada/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-joda/2.4.5/jackson-datatype-joda-2.4.5.jar
+[INFO]   CP: /Users/jamesagada/.m2/repository/com/fasterxml/jackson/dataformat/jackson-dataformat-yaml/2.4.5/jackson-dataformat-yaml-2.4.5.jar
+[INFO]   CP: /Users/jamesagada/.m2/repository/org/yaml/snakeyaml/1.12/snakeyaml-1.12.jar
+[INFO]   CP: /Users/jamesagada/.m2/repository/io/swagger/swagger-models/1.5.9/swagger-models-1.5.9.jar
+[INFO]   CP: /Users/jamesagada/.m2/repository/io/swagger/swagger-annotations/1.5.9/swagger-annotations-1.5.9.jar
+[INFO]   CP: /Users/jamesagada/.m2/repository/org/slf4j/slf4j-log4j12/1.7.21/slf4j-log4j12-1.7.21.jar
+[INFO]   CP: /Users/jamesagada/.m2/repository/log4j/log4j/1.2.17/log4j-1.2.17.jar
+[INFO]   CP: /Users/jamesagada/.m2/repository/org/projectlombok/lombok/1.16.10/lombok-1.16.10.jar
+DataNucleus Enhancer (version 4.1.7) for API "JDO"
+DataNucleus Enhancer : Classpath
+>>  /usr/local/Cellar/maven/3.2.5/libexec/boot/plexus-classworlds-2.5.2.jar
+ENHANCED (Persistable) : domainapp.modules.simple.dom.impl.SimpleObject
+DataNucleus Enhancer completed with success for 1 classes. Timings : input=155 ms, enhance=54 ms, total=209 ms. Consult the log for full details
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ ziemozi-module-simple ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /Users/jamesagada/Development/isis/ziemozi/module-simple/src/test/resources
+[INFO] Copying 0 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ ziemozi-module-simple ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 6 source files to /Users/jamesagada/Development/isis/ziemozi/module-simple/target/test-classes
+[INFO] 
+[INFO] --- datanucleus-maven-plugin:4.0.5:enhance (process-test-classes) @ ziemozi-module-simple ---
+[INFO]   CP: /Users/jamesagada/.m2/repository/org/datanucleus/datanucleus-maven-plugin/4.0.5/datanucleus-maven-plugin-4.0.5.jar
+[INFO]   CP: /Users/jamesagada/.m2/repository/org/datanucleus/datanucleus-core/4.1.7/datanucleus-core-4.1.7.jar
+[INFO]   CP: /Users/jamesagada/.m2/repository/org/datanucleus/datanucleus-api-jdo/4.1.1/datanucleus-api-jdo-4.1.1.jar
+[INFO]   CP: /Users/jamesagada/.m2/repository/org/datanucleus/datanucleus-jodatime/4.1.0-release/datanucleus-jodatime-4.1.0-release.jar
+[INFO]   CP: /Users/jamesagada/.m2/repository/org/codehaus/plexus/plexus-utils/3.0.8/plexus-utils-3.0.8.jar
+[INFO]   CP: /Users/jamesagada/.m2/repository/org/codehaus/plexus/plexus-component-annotations/1.5.5/plexus-component-annotations-1.5.5.jar
+[INFO]   CP: /Users/jamesagada/.m2/repository/org/sonatype/sisu/sisu-inject-bean/2.3.0/sisu-inject-bean-2.3.0.jar
+[INFO]   CP: /Users/jamesagada/.m2/repository/org/sonatype/sisu/sisu-guice/3.1.0/sisu-guice-3.1.0-no_aop.jar
+[INFO]   CP: /Users/jamesagada/.m2/repository/org/sonatype/sisu/sisu-guava/0.9.9/sisu-guava-0.9.9.jar
+[INFO]   CP: /Users/jamesagada/.m2/repository/org/apache/xbean/xbean-reflect/3.4/xbean-reflect-3.4.jar
+[INFO]   CP: /Users/jamesagada/.m2/repository/log4j/log4j/1.2.12/log4j-1.2.12.jar
+[INFO]   CP: /Users/jamesagada/.m2/repository/commons-logging/commons-logging-api/1.1/commons-logging-api-1.1.jar
+[INFO]   CP: /Users/jamesagada/.m2/repository/com/google/collections/google-collections/1.0/google-collections-1.0.jar
+[INFO]   CP: /Users/jamesagada/.m2/repository/junit/junit/3.8.2/junit-3.8.2.jar
+[INFO]   CP: /Users/jamesagada/Development/isis/ziemozi/module-simple/target/test-classes
+[INFO]   CP: /Users/jamesagada/Development/isis/ziemozi/module-simple/target/classes
+[INFO]   CP: /Users/jamesagada/.m2/repository/org/apache/isis/core/isis-core-applib/1.15.0/isis-core-applib-1.15.0.jar
+[INFO]   CP: /Users/jamesagada/.m2/repository/org/apache/isis/core/isis-core-schema/1.15.0/isis-core-schema-1.15.0.jar
+[INFO]   CP: /Users/jamesagada/.m2/repository/joda-time/joda-time/2.9.4/joda-time-2.9.4.jar
+[INFO]   CP: /Users/jamesagada/.m2/repository/org/apache/geronimo/specs/geronimo-atinject_1.0_spec/1.0/geronimo-atinject_1.0_spec-1.0.jar
+[INFO]   CP: /Users/jamesagada/.m2/repository/javax/validation/validation-api/1.1.0.Final/validation-api-1.1.0.Final.jar
+[INFO]   CP: /Users/jamesagada/.m2/repository/org/apache/geronimo/specs/geronimo-jta_1.1_spec/1.1.1/geronimo-jta_1.1_spec-1.1.1.jar
+[INFO]   CP: /Users/jamesagada/.m2/repository/org/apache/geronimo/specs/geronimo-jcdi_1.0_spec/1.0/geronimo-jcdi_1.0_spec-1.0.jar
+[INFO]   CP: /Users/jamesagada/.m2/repository/org/jboss/spec/javax/ws/rs/jboss-jaxrs-api_2.0_spec/1.0.0.Final/jboss-jaxrs-api_2.0_spec-1.0.0.Final.jar
+[INFO]   CP: /Users/jamesagada/.m2/repository/javax/jdo/jdo-api/3.1/jdo-api-3.1.jar
+[INFO]   CP: /Users/jamesagada/.m2/repository/javax/transaction/transaction-api/1.1/transaction-api-1.1.jar
+[INFO]   CP: /Users/jamesagada/.m2/repository/org/datanucleus/datanucleus-jdo-query/4.0.5/datanucleus-jdo-query-4.0.5.jar
+[INFO]   CP: /Users/jamesagada/.m2/repository/org/reflections/reflections/0.9.10/reflections-0.9.10.jar
+[INFO]   CP: /Users/jamesagada/.m2/repository/org/javassist/javassist/3.20.0-GA/javassist-3.20.0-GA.jar
+[INFO]   CP: /Users/jamesagada/.m2/repository/com/google/code/findbugs/annotations/2.0.1/annotations-2.0.1.jar
+[INFO]   CP: /Users/jamesagada/.m2/repository/com/google/guava/guava/19.0/guava-19.0.jar
+[INFO]   CP: /Users/jamesagada/.m2/repository/org/hamcrest/hamcrest-library/1.3/hamcrest-library-1.3.jar
+[INFO]   CP: /Users/jamesagada/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar
+[INFO]   CP: /Users/jamesagada/.m2/repository/org/slf4j/slf4j-api/1.7.21/slf4j-api-1.7.21.jar
+[INFO]   CP: /Users/jamesagada/.m2/repository/org/apache/isis/core/isis-core-log4j/1.15.0/isis-core-log4j-1.15.0.jar
+[INFO]   CP: /Users/jamesagada/.m2/repository/org/apache/isis/core/isis-core-metamodel/1.15.0/isis-core-metamodel-1.15.0.jar
+[INFO]   CP: /Users/jamesagada/.m2/repository/commons-codec/commons-codec/1.10/commons-codec-1.10.jar
+[INFO]   CP: /Users/jamesagada/.m2/repository/commons-cli/commons-cli/1.3.1/commons-cli-1.3.1.jar
+[INFO]   CP: /Users/jamesagada/.m2/repository/com/google/inject/guice/4.1.0/guice-4.1.0.jar
+[INFO]   CP: /Users/jamesagada/.m2/repository/javax/inject/javax.inject/1/javax.inject-1.jar
+[INFO]   CP: /Users/jamesagada/.m2/repository/aopalliance/aopalliance/1.0/aopalliance-1.0.jar
+[INFO]   CP: /Users/jamesagada/.m2/repository/com/google/code/gson/gson/2.7/gson-2.7.jar
+[INFO]   CP: /Users/jamesagada/.m2/repository/org/datanucleus/datanucleus-rdbms/4.1.9/datanucleus-rdbms-4.1.9.jar
+[INFO]   CP: /Users/jamesagada/.m2/repository/io/swagger/swagger-core/1.5.9/swagger-core-1.5.9.jar
+[INFO]   CP: /Users/jamesagada/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.8.0/jackson-annotations-2.8.0.jar
+[INFO]   CP: /Users/jamesagada/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.8.0/jackson-databind-2.8.0.jar
+[INFO]   CP: /Users/jamesagada/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.8.0/jackson-core-2.8.0.jar
+[INFO]   CP: /Users/jamesagada/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-joda/2.4.5/jackson-datatype-joda-2.4.5.jar
+[INFO]   CP: /Users/jamesagada/.m2/repository/com/fasterxml/jackson/dataformat/jackson-dataformat-yaml/2.4.5/jackson-dataformat-yaml-2.4.5.jar
+[INFO]   CP: /Users/jamesagada/.m2/repository/org/yaml/snakeyaml/1.12/snakeyaml-1.12.jar
+[INFO]   CP: /Users/jamesagada/.m2/repository/io/swagger/swagger-models/1.5.9/swagger-models-1.5.9.jar
+[INFO]   CP: /Users/jamesagada/.m2/repository/io/swagger/swagger-annotations/1.5.9/swagger-annotations-1.5.9.jar
+[INFO]   CP: /Users/jamesagada/.m2/repository/org/slf4j/slf4j-log4j12/1.7.21/slf4j-log4j12-1.7.21.jar
+[INFO]   CP: /Users/jamesagada/.m2/repository/log4j/log4j/1.2.17/log4j-1.2.17.jar
+[INFO]   CP: /Users/jamesagada/.m2/repository/org/projectlombok/lombok/1.16.10/lombok-1.16.10.jar
+DataNucleus Enhancer (version 4.1.7) for API "JDO"
+DataNucleus Enhancer : Classpath
+>>  /usr/local/Cellar/maven/3.2.5/libexec/boot/plexus-classworlds-2.5.2.jar
+DataNucleus Enhancer completed with success for 0 classes. Timings : input=46 ms, enhance=0 ms, total=46 ms. Consult the log for full details
+DataNucleus Enhancer completed and no classes were enhanced. Consult the log for full details
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.19.1:test (default-test) @ ziemozi-module-simple ---
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running domainapp.modules.simple.dom.impl.SimpleObject_Test$Name
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.204 sec - in domainapp.modules.simple.dom.impl.SimpleObject_Test$Name
+Running domainapp.modules.simple.dom.impl.SimpleObjectRepository_Test$Create
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.082 sec - in domainapp.modules.simple.dom.impl.SimpleObjectRepository_Test$Create
+Running domainapp.modules.simple.dom.impl.SimpleObjectRepository_Test$ListAll
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.014 sec - in domainapp.modules.simple.dom.impl.SimpleObjectRepository_Test$ListAll
+
+Results :
+
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0
+
+[INFO] 
+[INFO] --- isis-maven-plugin:1.15.0:validate (default) @ ziemozi-module-simple ---
+[INFO] adding isis.appManifest = domainapp.modules.simple.SimpleModuleManifest
+[INFO] Reflections took 159 ms to scan 4 urls, producing 266 keys and 1302 values 
+[INFO] adding isis.services.ServicesInstallerFromAnnotation.packagePrefix = domainapp.modules.simple.dom,domainapp.modules.simple.fixture
+[INFO] adding isis.persistor.datanucleus.RegisterEntities.packagePrefix = domainapp.modules.simple.dom,domainapp.modules.simple.fixture
+[INFO] adding isis.services = 
+[INFO] installing org.apache.isis.core.runtime.services.ServicesInstallerFromConfigurationAndAnnotation
+[INFO] adding isis.fixtures = 
+[INFO] initialising Isis System
+[INFO] working directory: /Users/jamesagada/Development/isis/ziemozi/.
+[INFO] resource stream source: context loader classpath
+[INFO] introspecting org.apache.isis.core.runtime.system.session.IsisSessionFactory: class-level details
+[INFO] introspecting java.lang.Object: class-level details
+[INFO] introspecting org.apache.isis.core.commons.components.ApplicationScopedComponent: class-level details
+[INFO] introspecting org.apache.isis.core.commons.components.Component: class-level details
+[INFO] introspecting org.apache.isis.core.runtime.system.persistence.PersistenceSessionFactory: class-level details
+[INFO] introspecting org.apache.isis.core.runtime.persistence.FixturesInstalledFlag: class-level details
+[INFO] introspecting org.apache.isis.core.metamodel.specloader.SpecificationLoader: class-level details
+[INFO] introspecting org.apache.isis.core.runtime.authorization.standard.AuthorizationManagerStandard: class-level details
+[INFO] introspecting org.apache.isis.core.runtime.authorization.AuthorizationManagerAbstract: class-level details
+[INFO] introspecting org.apache.isis.core.runtime.authorization.AuthorizationManager: class-level details
+[INFO] introspecting org.apache.isis.core.metamodel.facetapi.MetaModelRefiner: class-level details
+[INFO] introspecting org.apache.isis.core.metamodel.facetapi.MetaModelValidatorRefiner: class-level details
+[INFO] introspecting org.apache.isis.core.runtime.authentication.standard.AuthenticationManagerStandard: class-level details
+[INFO] introspecting org.apache.isis.core.runtime.authentication.AuthenticationManager: class-level details
+[INFO] introspecting org.apache.isis.applib.services.fixturespec.FixtureScriptsDefault: class-level details
+[INFO] introspecting org.apache.isis.applib.fixturescripts.FixtureScripts: class-level details
+[INFO] introspecting org.apache.isis.applib.AbstractService: class-level details
+[INFO] introspecting org.apache.isis.applib.AbstractContainedObject: class-level details
+[INFO] introspecting java.util.List: class-level details
+[INFO] introspecting java.util.Collection: class-level details
+[INFO] introspecting java.lang.Iterable: class-level details
+[INFO] introspecting org.apache.isis.applib.fixturescripts.FixtureResult: class-level details
+[INFO] introspecting java.lang.String: class-level details
+[INFO] introspecting org.apache.isis.applib.fixturescripts.FixtureScript: class-level details
+[INFO] introspecting org.apache.isis.applib.AbstractViewModel: class-level details
+[INFO] introspecting org.apache.isis.applib.ViewModel: class-level details
+[INFO] introspecting org.apache.isis.applib.fixtures.InstallableFixture: class-level details
+[INFO] introspecting org.apache.isis.core.commons.config.IsisConfigurationDefault: class-level details
+[INFO] introspecting org.apache.isis.core.metamodel.services.configinternal.ConfigurationServiceInternal: class-level details
+[INFO] introspecting org.apache.isis.core.commons.config.IsisConfiguration: class-level details
+[INFO] introspecting org.apache.isis.core.runtime.services.deplcat.DeploymentCategoryProviderDefault: class-level details
+[INFO] introspecting org.apache.isis.core.metamodel.deployment.DeploymentCategoryProvider: class-level details
+[INFO] introspecting org.apache.isis.objectstore.jdo.datanucleus.service.eventbus.EventBusServiceJdo: class-level details
+[INFO] introspecting org.apache.isis.core.runtime.services.eventbus.EventBusServiceDefault: class-level details
+[INFO] introspecting org.apache.isis.applib.services.eventbus.EventBusService: class-level details
+[INFO] introspecting org.apache.isis.applib.services.queryresultscache.QueryResultsCache$Control: class-level details
+[INFO] introspecting org.apache.isis.applib.AbstractSubscriber: class-level details
+[INFO] introspecting domainapp.modules.simple.dom.impl.SimpleObjectMenu: class-level details
+[INFO] introspecting domainapp.modules.simple.dom.impl.SimpleObject: class-level details
+[INFO] introspecting java.lang.Comparable: class-level details
+[INFO] introspecting void: class-level details
+[INFO] introspecting domainapp.modules.simple.dom.impl.SimpleObjectRepository: class-level details
+[INFO] introspecting org.apache.isis.applib.services.config.ConfigurationServiceMenu: class-level details
+[INFO] introspecting java.util.Set: class-level details
+[INFO] introspecting org.apache.isis.applib.services.config.ConfigurationProperty: class-level details
+[INFO] introspecting org.apache.isis.applib.services.hsqldb.HsqlDbManagerMenu: class-level details
+[INFO] introspecting org.apache.isis.applib.services.layout.LayoutServiceMenu: class-level details
+[INFO] introspecting org.apache.isis.applib.value.Blob: class-level details
+[INFO] introspecting org.apache.isis.applib.services.layout.LayoutService$Style: class-level details
+[INFO] introspecting org.apache.isis.applib.services.metamodel.MetaModelServicesMenu: class-level details
+[INFO] introspecting org.apache.isis.applib.value.Clob: class-level details
+[INFO] introspecting org.apache.isis.applib.services.swagger.SwaggerServiceMenu: class-level details
+[INFO] introspecting org.apache.isis.applib.services.swagger.SwaggerService$Visibility: class-level details
+[INFO] introspecting org.apache.isis.applib.services.swagger.SwaggerService$Format: class-level details
+[INFO] introspecting org.apache.isis.core.runtime.services.i18n.po.TranslationServicePoMenu: class-level details
+[INFO] introspecting org.apache.isis.core.runtime.services.message.MessageServiceDefault: class-level details
+[INFO] introspecting org.apache.isis.applib.services.message.MessageService: class-level details
+[INFO] introspecting org.apache.isis.core.runtime.services.persistsession.PersistenceSessionServiceInternalDefault: class-level details
+[INFO] introspecting org.apache.isis.core.metamodel.services.persistsession.PersistenceSessionServiceInternal: class-level details
+[INFO] introspecting org.apache.isis.core.metamodel.adapter.mgr.AdapterManager: class-level details
+[INFO] introspecting org.apache.isis.core.metamodel.adapter.mgr.AdapterManagerBase: class-level details
+[INFO] introspecting org.apache.isis.core.runtime.system.transaction.TransactionalClosure: class-level details
+[INFO] introspecting org.apache.isis.applib.annotation.Bulk$InteractionContext: class-level details
+[INFO] introspecting org.apache.isis.applib.fixturescripts.ExecutionParametersService: class-level details
+[INFO] introspecting org.apache.isis.applib.services.actinvoc.ActionInvocationContext: class-level details
+[INFO] introspecting org.apache.isis.applib.services.audit.AuditerServiceLogging: class-level details
+[INFO] introspecting org.apache.isis.applib.services.audit.AuditerService: class-level details
+[INFO] introspecting org.apache.isis.applib.services.classdiscovery.ClassDiscoveryServiceUsingReflections: class-level details
+[INFO] introspecting org.apache.isis.applib.services.classdiscovery.ClassDiscoveryService2: class-level details
+[INFO] introspecting org.apache.isis.applib.services.classdiscovery.ClassDiscoveryService: class-level details
+[INFO] introspecting org.apache.isis.applib.services.clock.ClockService: class-level details
+[INFO] introspecting org.apache.isis.applib.services.command.CommandContext: class-level details
+[INFO] introspecting org.apache.isis.applib.services.iactn.InteractionContext: class-level details
+[INFO] introspecting org.apache.isis.applib.services.publish.PublisherServiceLogging: class-level details
+[INFO] introspecting org.apache.isis.applib.services.publish.PublisherService: class-level details
+[INFO] introspecting org.apache.isis.applib.services.queryresultscache.QueryResultsCache: class-level details
+[INFO] introspecting org.apache.isis.applib.services.WithTransactionScope: class-level details
+[INFO] introspecting org.apache.isis.applib.services.routing.RoutingServiceDefault: class-level details
+[INFO] introspecting org.apache.isis.applib.services.routing.RoutingService: class-level details
+[INFO] introspecting org.apache.isis.applib.services.scratchpad.Scratchpad: class-level details
+[INFO] introspecting org.apache.isis.applib.services.tablecol.TableColumnOrderService$Default: class-level details
+[INFO] introspecting org.apache.isis.applib.services.tablecol.TableColumnOrderService: class-level details
+[INFO] introspecting org.apache.isis.applib.services.urlencoding.UrlEncodingServiceUsingBaseEncoding: class-level details
+[INFO] introspecting org.apache.isis.applib.services.urlencoding.UrlEncodingService: class-level details
+[INFO] introspecting org.apache.isis.core.metamodel.services.appfeat.ApplicationFeatureFactory: class-level details
+[INFO] introspecting org.apache.isis.core.metamodel.services.appfeat.ApplicationFeature: class-level details
+[INFO] introspecting org.apache.isis.applib.annotation.SemanticsOf: class-level details
+[INFO] introspecting org.apache.isis.applib.services.appfeat.ApplicationMemberType: class-level details
+[INFO] introspecting boolean: class-level details
+[INFO] introspecting java.lang.Boolean: class-level details
+[INFO] introspecting java.lang.Integer: class-level details
+[INFO] introspecting org.apache.isis.core.metamodel.services.appfeat.ApplicationFeatureId: class-level details
+[INFO] introspecting org.apache.isis.core.metamodel.services.appfeat.ApplicationFeatureRepositoryDefault: class-level details
+[INFO] introspecting org.apache.isis.applib.services.appfeat.ApplicationFeatureRepository: class-level details
+[INFO] introspecting org.apache.isis.core.metamodel.services.bookmarks.BookmarkServiceInternalDefault: class-level details
+[INFO] introspecting org.apache.isis.applib.services.bookmark.BookmarkService2: class-level details
+[INFO] introspecting org.apache.isis.applib.services.bookmark.BookmarkService: class-level details
+[INFO] introspecting org.apache.isis.core.metamodel.services.config.ConfigurationServiceDefault: class-level details
+[INFO] introspecting org.apache.isis.applib.services.config.ConfigurationService: class-level details
+[INFO] introspecting org.apache.isis.core.metamodel.services.container.DomainObjectContainerDefault: class-level details
+[INFO] introspecting org.apache.isis.applib.services.exceprecog.ExceptionRecognizer: class-level details
+[INFO] introspecting org.apache.isis.core.metamodel.services.factory.FactoryServiceInternalDefault: class-level details
+[INFO] introspecting org.apache.isis.applib.services.factory.FactoryService: class-level details
+[INFO] introspecting org.apache.isis.core.metamodel.services.grid.GridLoaderServiceDefault: class-level details
+[INFO] introspecting org.apache.isis.applib.services.grid.GridLoaderService: class-level details
+[INFO] introspecting org.apache.isis.core.metamodel.services.grid.GridServiceDefault: class-level details
+[INFO] introspecting org.apache.isis.applib.services.grid.GridService: class-level details
+[INFO] introspecting org.apache.isis.core.metamodel.services.grid.bootstrap3.GridSystemServiceBS3: class-level details
+[INFO] introspecting org.apache.isis.core.metamodel.services.grid.GridSystemServiceAbstract: class-level details
+[INFO] introspecting org.apache.isis.applib.services.grid.GridSystemService: class-level details
+[INFO] introspecting org.apache.isis.core.metamodel.services.layout.LayoutServiceDefault: class-level details
+[INFO] introspecting org.apache.isis.applib.services.layout.LayoutService: class-level details
+[INFO] introspecting org.apache.isis.core.metamodel.services.message.MessageServiceNoop: class-level details
+[INFO] introspecting org.apache.isis.core.metamodel.services.metamodel.MetaModelServiceDefault: class-level details
+[INFO] introspecting org.apache.isis.applib.services.metamodel.MetaModelService3: class-level details
+[INFO] introspecting org.apache.isis.applib.services.metamodel.MetaModelService2: class-level details
+[INFO] introspecting org.apache.isis.applib.services.metamodel.MetaModelService: class-level details
+[INFO] introspecting org.apache.isis.core.metamodel.services.persistsession.PersistenceSessionServiceInternalNoop: class-level details
+[INFO] introspecting org.apache.isis.core.metamodel.services.registry.ServiceRegistryDefault: class-level details
+[INFO] introspecting org.apache.isis.applib.services.registry.ServiceRegistry2: class-level details
+[INFO] introspecting org.apache.isis.applib.services.registry.ServiceRegistry: class-level details
+[INFO] introspecting org.apache.isis.core.metamodel.services.ServicesInjectorAware: class-level details
+[INFO] introspecting org.apache.isis.core.metamodel.services.repository.RepositoryServiceInternalDefault: class-level details
+[INFO] introspecting org.apache.isis.applib.services.repository.RepositoryService: class-level details
+[INFO] introspecting org.apache.isis.core.metamodel.services.swagger.SwaggerServiceDefault: class-level details
+[INFO] introspecting org.apache.isis.applib.services.swagger.SwaggerService: class-level details
+[INFO] introspecting org.apache.isis.core.metamodel.services.title.TitleServiceDefault: class-level details
+[INFO] introspecting org.apache.isis.applib.services.title.TitleService: class-level details
+[INFO] introspecting org.apache.isis.core.metamodel.services.user.UserServiceDefault: class-level details
+[INFO] introspecting org.apache.isis.applib.services.user.UserService: class-level details
+[INFO] introspecting org.apache.isis.core.metamodel.services.user.UserServiceDefault$SudoServiceSpi: class-level details
+[INFO] introspecting org.apache.isis.applib.services.sudo.SudoService$Spi: class-level details
+[INFO] introspecting org.apache.isis.core.metamodel.services.xactn.TransactionServiceDefault: class-level details
+[INFO] introspecting org.apache.isis.applib.services.xactn.TransactionService2: class-level details
+[INFO] introspecting org.apache.isis.applib.services.xactn.TransactionService: class-level details
+[INFO] introspecting org.apache.isis.core.runtime.services.auditing.AuditingServiceInternal: class-level details
+[INFO] introspecting org.apache.isis.core.runtime.services.authsess.AuthenticationSessionProviderDefault: class-level details
+[INFO] introspecting org.apache.isis.core.commons.authentication.AuthenticationSessionProvider: class-level details
+[INFO] introspecting org.apache.isis.core.runtime.services.background.BackgroundServiceDefault: class-level details
+[INFO] introspecting org.apache.isis.applib.services.background.BackgroundService2: class-level details
+[INFO] introspecting org.apache.isis.applib.services.background.BackgroundService: class-level details
+[INFO] introspecting org.apache.isis.core.runtime.services.changes.ChangedObjectsServiceInternal: class-level details
+[INFO] introspecting org.apache.isis.core.runtime.services.command.CommandDtoServiceInternalDefault: class-level details
+[INFO] introspecting org.apache.isis.core.metamodel.services.command.CommandDtoServiceInternal: class-level details
+[INFO] introspecting org.apache.isis.core.runtime.services.command.CommandServiceDefault: class-level details
+[INFO] introspecting org.apache.isis.applib.services.command.spi.CommandService: class-level details
+[INFO] introspecting org.apache.isis.core.runtime.services.email.EmailServiceDefault: class-level details
+[INFO] introspecting org.apache.isis.applib.services.email.EmailService: class-level details
+[INFO] introspecting java.io.Serializable: class-level details
+[INFO] introspecting org.apache.isis.core.runtime.services.homepage.HomePageProviderServiceDefault: class-level details
+[INFO] introspecting org.apache.isis.applib.services.homepage.HomePageProviderService: class-level details
+[INFO] introspecting org.apache.isis.core.runtime.services.i18n.po.TranslationServicePo: class-level details
+[INFO] introspecting org.apache.isis.applib.services.i18n.TranslationService: class-level details
+[INFO] introspecting org.apache.isis.core.runtime.services.ixn.InteractionDtoServiceInternalDefault: class-level details
+[INFO] introspecting org.apache.isis.core.metamodel.services.ixn.InteractionDtoServiceInternal: class-level details
+[INFO] introspecting org.apache.isis.core.runtime.services.memento.MementoServiceDefault: class-level details
+[INFO] introspecting org.apache.isis.applib.services.memento.MementoService: class-level details
+[INFO] introspecting org.apache.isis.core.runtime.services.metrics.MetricsServiceDefault: class-level details
+[INFO] introspecting org.apache.isis.applib.services.metrics.MetricsService: class-level details
+[INFO] introspecting javax.jdo.listener.InstanceLifecycleListener: class-level details
+[INFO] introspecting javax.jdo.listener.LoadLifecycleListener: class-level details
+[INFO] introspecting org.apache.isis.core.runtime.services.publish.PublishingServiceInternalDefault: class-level details
+[INFO] introspecting org.apache.isis.core.metamodel.services.publishing.PublishingServiceInternal: class-level details
+[INFO] introspecting org.apache.isis.core.runtime.services.sessmgmt.SessionManagementServiceDefault: class-level details
+[INFO] introspecting org.apache.isis.applib.services.sessmgmt.SessionManagementService: class-level details
+[INFO] introspecting org.apache.isis.core.runtime.services.sudo.SudoServiceDefault: class-level details
+[INFO] introspecting org.apache.isis.applib.services.sudo.SudoService: class-level details
+[INFO] introspecting org.apache.isis.core.runtime.services.userreg.EmailNotificationServiceDefault: class-level details
+[INFO] introspecting org.apache.isis.applib.services.userreg.EmailNotificationService: class-level details
+[INFO] introspecting org.apache.isis.core.runtime.services.xmlsnapshot.XmlSnapshotServiceDefault: class-level details
+[INFO] introspecting org.apache.isis.applib.services.xmlsnapshot.XmlSnapshotServiceAbstract: class-level details
+[INFO] introspecting org.apache.isis.applib.services.xmlsnapshot.XmlSnapshotService: class-level details
+[INFO] introspecting org.apache.isis.objectstore.jdo.applib.service.exceprecog.ExceptionRecognizerCompositeForJdoObjectStore: class-level details
+[INFO] introspecting org.apache.isis.applib.services.exceprecog.ExceptionRecognizerComposite: class-level details
+[INFO] introspecting org.apache.isis.applib.services.exceprecog.ExceptionRecognizer2: class-level details
+[INFO] introspecting org.apache.isis.objectstore.jdo.datanucleus.service.support.IsisJdoSupportImpl: class-level details
+[INFO] introspecting org.apache.isis.objectstore.jdo.applib.service.support.IsisJdoSupport: class-level details
+[INFO] introspecting org.apache.isis.applib.services.jdosupport.IsisJdoSupport: class-level details
+[INFO] introspecting org.apache.isis.objectstore.jdo.datanucleus.service.support.TimestampService: class-level details
+[INFO] introspecting javax.jdo.listener.StoreLifecycleListener: class-level details
+[INFO] introspecting org.apache.isis.schema.services.jaxb.JaxbServiceDefault: class-level details
+[INFO] introspecting org.apache.isis.applib.services.jaxb.JaxbService$Simple: class-level details
+[INFO] introspecting org.apache.isis.applib.services.jaxb.JaxbService: class-level details
+[INFO] introspecting org.apache.isis.applib.services.dto.Dto_downloadXsd: class-level details
+[INFO] introspecting org.apache.isis.applib.services.jaxb.JaxbService$IsisSchemas: class-level details
+[INFO] introspecting org.apache.isis.core.metamodel.services.jdosupport.Persistable_datanucleusVersionTimestamp: class-level details
+[INFO] introspecting java.sql.Timestamp: class-level details
+[INFO] introspecting org.apache.isis.core.metamodel.services.jdosupport.Persistable_downloadJdoMetadata: class-level details
+[INFO] introspecting org.apache.isis.core.metamodel.services.jdosupport.Persistable_datanucleusIdLong: class-level details
+[INFO] introspecting java.lang.Long: class-level details
+[INFO] introspecting org.apache.isis.applib.services.layout.Object_downloadLayoutXml: class-level details
+[INFO] introspecting org.apache.isis.applib.services.dto.Dto_downloadXml: class-level details
+[INFO] introspecting org.apache.isis.applib.services.bookmark.BookmarkHolder_object: class-level details
+[INFO] introspecting org.apache.isis.applib.services.bookmark.BookmarkHolder_lookup: class-level details
+[INFO] introspecting org.apache.isis.applib.services.layout.Object_rebuildMetamodel: class-level details
+[INFO] introspecting org.apache.isis.core.metamodel.services.jdosupport.Persistable_datanucleusVersionLong: class-level details
+[INFO] did *not* find config properties to use JNDI datasource; will use JDBC
+[INFO] introspecting org.apache.isis.applib.services.iactn.Interaction: class-level details
+[INFO] calling @PostConstruct on all domain services
+[WARNING] NOT configured
+[INFO] calling @PreDestroy on all domain services
+[INFO] 
+
+##############################################################################
+#
+# .pot file
+#
+# Translate this file to each required language and place in WEB-INF, eg:
+#
+#     /WEB-INF/translations-en_US.po
+#     /WEB-INF/translations-en.po
+#     /WEB-INF/translations-fr_FR.po
+#     /WEB-INF/translations-fr.po
+#     /WEB-INF/translations.po
+#
+# If the app uses TranslatableString (eg for internationalized validation
+# messages), or if the app calls the TranslationService directly, then ensure
+# that all text to be translated has been captured by running a full
+# integration test suite that exercises all relevant behaviour
+#
+##############################################################################
+
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: 2017-08-26 09:21:16+\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+
+#: org.apache.isis.applib.services.metamodel.MetaModelServicesMenu#downloadMetaModel(java.lang.String)
+msgid ".csv file name"
+msgstr ""
+
+
+#: org.apache.isis.core.runtime.services.i18n.po.TranslationServicePoMenu#downloadTranslations(java.lang.String)
+msgid ".pot file name"
+msgstr ""
+
+
+#: org.apache.isis.applib.services.bookmark.BookmarkHolder_lookup#act()
+#: org.apache.isis.applib.services.dto.Dto_downloadXml#act()
+#: org.apache.isis.applib.services.dto.Dto_downloadXsd#act()
+#: org.apache.isis.applib.services.layout.Object_downloadLayoutXml#act()
+#: org.apache.isis.applib.services.layout.Object_rebuildMetamodel#act()
+#: org.apache.isis.core.metamodel.services.jdosupport.Persistable_downloadJdoMetadata#act()
+msgid "Act"
+msgstr ""
+
+
+#: org.apache.isis.applib.services.appfeat.ApplicationMemberType#ACTION
+msgid "Action"
+msgstr ""
+
+
+#: org.apache.isis.core.runtime.system.session.IsisSessionFactoryBuilder
+msgid "Are you sure?"
+msgstr ""
+
+
+#: org.apache.isis.core.runtime.system.session.IsisSessionFactoryBuilder
+msgid "Cancel"
+msgstr ""
+
+
+#: org.apache.isis.core.runtime.services.i18n.po.TranslationServicePoMenu#resetTranslationCache()
+msgid "Clear translation cache"
+msgstr ""
+
+
+#: org.apache.isis.applib.services.appfeat.ApplicationMemberType#COLLECTION
+msgid "Collection"
+msgstr ""
+
+
+#: org.apache.isis.applib.services.layout.LayoutService$Style#COMPLETE
+msgid "Complete"
+msgstr ""
+
+
+#: org.apache.isis.applib.services.config.ConfigurationServiceMenu#configuration()
+msgid "Configuration"
+msgstr ""
+
+
+#: org.apache.isis.core.runtime.system.session.IsisSessionFactoryBuilder
+msgid "Confirm"
+msgstr ""
+
+
+#: domainapp.modules.simple.dom.impl.SimpleObjectMenu#create()
+#: domainapp.modules.simple.dom.impl.SimpleObjectRepository#create()
+msgid "Create"
+msgstr ""
+
+
+#: org.apache.isis.applib.services.layout.LayoutService$Style#CURRENT
+msgid "Current"
+msgstr ""
+
+
+#: domainapp.modules.simple.dom.impl.SimpleObject#delete()
+msgid "Delete"
+msgstr ""
+
+
+#: domainapp.modules.simple.dom.impl.SimpleObject#downloadJdoMetadata()
+msgid "Download Jdo Metadata"
+msgstr ""
+
+
+#: domainapp.modules.simple.dom.impl.SimpleObject#downloadLayoutXml()
+#: java.io.Serializable#downloadLayoutXml()
+#: java.lang.Comparable#downloadLayoutXml()
+#: java.lang.Iterable#downloadLayoutXml()
+#: java.lang.Object#downloadLayoutXml()
+#: java.util.Collection#downloadLayoutXml()
+#: java.util.List#downloadLayoutXml()
+#: java.util.Set#downloadLayoutXml()
+#: javax.jdo.listener.InstanceLifecycleListener#downloadLayoutXml()
+#: javax.jdo.listener.LoadLifecycleListener#downloadLayoutXml()
+#: javax.jdo.listener.StoreLifecycleListener#downloadLayoutXml()
+#: org.apache.isis.applib.AbstractContainedObject#downloadLayoutXml()
+#: org.apache.isis.applib.AbstractService#downloadLayoutXml()
+#: org.apache.isis.applib.AbstractSubscriber#downloadLayoutXml()
+#: org.apache.isis.applib.AbstractViewModel#downloadLayoutXml()
+#: org.apache.isis.applib.ViewModel#downloadLayoutXml()
+#: org.apache.isis.applib.fixtures.InstallableFixture#downloadLayoutXml()
+#: org.apache.isis.applib.fixturescripts.FixtureResult#downloadLayoutXml()
+#: org.apache.isis.applib.fixturescripts.FixtureScript#downloadLayoutXml()
+#: org.apache.isis.applib.fixturescripts.FixtureScripts#downloadLayoutXml()
+#: org.apache.isis.applib.services.WithTransactionScope#downloadLayoutXml()
+#: org.apache.isis.applib.services.appfeat.ApplicationFeatureRepository#downloadLayoutXml()
+#: org.apache.isis.applib.services.audit.AuditerService#downloadLayoutXml()
+#: org.apache.isis.applib.services.background.BackgroundService#downloadLayoutXml()
+#: org.apache.isis.applib.services.background.BackgroundService2#downloadLayoutXml()
+#: org.apache.isis.applib.services.bookmark.BookmarkService#downloadLayoutXml()
+#: org.apache.isis.applib.services.bookmark.BookmarkService2#downloadLayoutXml()
+#: org.apache.isis.applib.services.classdiscovery.ClassDiscoveryService#downloadLayoutXml()
+#: org.apache.isis.applib.services.classdiscovery.ClassDiscoveryService2#downloadLayoutXml()
+#: org.apache.isis.applib.services.command.spi.CommandService#downloadLayoutXml()
+#: org.apache.isis.applib.services.config.ConfigurationProperty#downloadLayoutXml()
+#: org.apache.isis.applib.services.config.ConfigurationService#downloadLayoutXml()
+#: org.apache.isis.applib.services.email.EmailService#downloadLayoutXml()
+#: org.apache.isis.applib.services.eventbus.EventBusService#downloadLayoutXml()
+#: org.apache.isis.applib.services.exceprecog.ExceptionRecognizer#downloadLayoutXml()
+#: org.apache.isis.applib.services.exceprecog.ExceptionRecognizer2#downloadLayoutXml()
+#: org.apache.isis.applib.services.exceprecog.ExceptionRecognizerComposite#downloadLayoutXml()
+#: org.apache.isis.applib.services.factory.FactoryService#downloadLayoutXml()
+#: org.apache.isis.applib.services.grid.GridLoaderService#downloadLayoutXml()
+#: org.apache.isis.applib.services.grid.GridService#downloadLayoutXml()
+#: org.apache.isis.applib.services.grid.GridSystemService#downloadLayoutXml()
+#: org.apache.isis.applib.services.homepage.HomePageProviderService#downloadLayoutXml()
+#: org.apache.isis.applib.services.i18n.TranslationService#downloadLayoutXml()
+#: org.apache.isis.applib.services.jaxb.JaxbService#downloadLayoutXml()
+#: org.apache.isis.applib.services.jaxb.JaxbService$Simple#downloadLayoutXml()
+#: org.apache.isis.applib.services.jdosupport.IsisJdoSupport#downloadLayoutXml()
+#: org.apache.isis.applib.services.layout.LayoutService#downloadLayoutXml()
+#: org.apache.isis.applib.services.memento.MementoService#downloadLayoutXml()
+#: org.apache.isis.applib.services.message.MessageService#downloadLayoutXml()
+#: org.apache.isis.applib.services.metamodel.MetaModelService#downloadLayoutXml()
+#: org.apache.isis.applib.services.metamodel.MetaModelService2#downloadLayoutXml()
+#: org.apache.isis.applib.services.metamodel.MetaModelService3#downloadLayoutXml()
+#: org.apache.isis.applib.services.metrics.MetricsService#downloadLayoutXml()
+#: org.apache.isis.applib.services.publish.PublisherService#downloadLayoutXml()
+#: org.apache.isis.applib.services.registry.ServiceRegistry#downloadLayoutXml()
+#: org.apache.isis.applib.services.registry.ServiceRegistry2#downloadLayoutXml()
+#: org.apache.isis.applib.services.repository.RepositoryService#downloadLayoutXml()
+#: org.apache.isis.applib.services.routing.RoutingService#downloadLayoutXml()
+#: org.apache.isis.applib.services.sessmgmt.SessionManagementService#downloadLayoutXml()
+#: org.apache.isis.applib.services.sudo.SudoService#downloadLayoutXml()
+#: org.apache.isis.applib.services.sudo.SudoService$Spi#downloadLayoutXml()
+#: org.apache.isis.applib.services.swagger.SwaggerService#downloadLayoutXml()
+#: org.apache.isis.applib.services.tablecol.TableColumnOrderService#downloadLayoutXml()
+#: org.apache.isis.applib.services.title.TitleService#downloadLayoutXml()
+#: org.apache.isis.applib.services.urlencoding.UrlEncodingService#downloadLayoutXml()
+#: org.apache.isis.applib.services.user.UserService#downloadLayoutXml()
+#: org.apache.isis.applib.services.userreg.EmailNotificationService#downloadLayoutXml()
+#: org.apache.isis.applib.services.xactn.TransactionService#downloadLayoutXml()
+#: org.apache.isis.applib.services.xactn.TransactionService2#downloadLayoutXml()
+#: org.apache.isis.applib.services.xmlsnapshot.XmlSnapshotService#downloadLayoutXml()
+#: org.apache.isis.applib.services.xmlsnapshot.XmlSnapshotServiceAbstract#downloadLayoutXml()
+#: org.apache.isis.core.commons.authentication.AuthenticationSessionProvider#downloadLayoutXml()
+#: org.apache.isis.core.commons.components.ApplicationScopedComponent#downloadLayoutXml()
+#: org.apache.isis.core.commons.components.Component#downloadLayoutXml()
+#: org.apache.isis.core.commons.config.IsisConfiguration#downloadLayoutXml()
+#: org.apache.isis.core.metamodel.adapter.mgr.AdapterManager#downloadLayoutXml()
+#: org.apache.isis.core.metamodel.adapter.mgr.AdapterManagerBase#downloadLayoutXml()
+#: org.apache.isis.core.metamodel.deployment.DeploymentCategoryProvider#downloadLayoutXml()
+#: org.apache.isis.core.metamodel.facetapi.MetaModelRefiner#downloadLayoutXml()
+#: org.apache.isis.core.metamodel.facetapi.MetaModelValidatorRefiner#downloadLayoutXml()
+#: org.apache.isis.core.metamodel.services.ServicesInjectorAware#downloadLayoutXml()
+#: org.apache.isis.core.metamodel.services.appfeat.ApplicationFeature#downloadLayoutXml()
+#: org.apache.isis.core.metamodel.services.command.CommandDtoServiceInternal#downloadLayoutXml()
+#: org.apache.isis.core.metamodel.services.configinternal.ConfigurationServiceInternal#downloadLayoutXml()
+#: org.apache.isis.core.metamodel.services.grid.GridSystemServiceAbstract#downloadLayoutXml()
+#: org.apache.isis.core.metamodel.services.ixn.InteractionDtoServiceInternal#downloadLayoutXml()
+#: org.apache.isis.core.metamodel.services.persistsession.PersistenceSessionServiceInternal#downloadLayoutXml()
+#: org.apache.isis.core.metamodel.services.publishing.PublishingServiceInternal#downloadLayoutXml()
+#: org.apache.isis.core.runtime.authentication.AuthenticationManager#downloadLayoutXml()
+#: org.apache.isis.core.runtime.authorization.AuthorizationManager#downloadLayoutXml()
+#: org.apache.isis.core.runtime.authorization.AuthorizationManagerAbstract#downloadLayoutXml()
+#: org.apache.isis.core.runtime.persistence.FixturesInstalledFlag#downloadLayoutXml()
+#: org.apache.isis.core.runtime.services.eventbus.EventBusServiceDefault#downloadLayoutXml()
+#: org.apache.isis.core.runtime.system.transaction.TransactionalClosure#downloadLayoutXml()
+#: org.apache.isis.objectstore.jdo.applib.service.support.IsisJdoSupport#downloadLayoutXml()
+msgid "Download Layout Xml"
+msgstr ""
+
+
+#: org.apache.isis.applib.services.layout.LayoutServiceMenu#downloadLayouts()
+msgid "Download Layouts (XML)"
+msgstr ""
+
+
+#: org.apache.isis.applib.services.metamodel.MetaModelServicesMenu#downloadMetaModel()
+msgid "Download Meta Model (CSV)"
+msgstr ""
+
+
+#: org.apache.isis.applib.services.swagger.SwaggerServiceMenu#downloadSwaggerSchemaDefinition()
+msgid "Download Swagger Schema Definition"
+msgstr ""
+
+
+#: org.apache.isis.core.runtime.services.i18n.po.TranslationServicePoMenu#downloadTranslations()
+msgid "Download Translations"
+msgstr ""
+
+
+#: org.apache.isis.core.metamodel.services.persistsession.PersistenceSessionServiceInternalNoop#executeWithinTransaction()
+#: org.apache.isis.core.runtime.services.persistsession.PersistenceSessionServiceInternalDefault#executeWithinTransaction()
+msgid "Execute Within Transaction"
+msgstr ""
+
+
+#: org.apache.isis.applib.services.dto.Dto_downloadXml#act(java.lang.String)
+#: org.apache.isis.applib.services.dto.Dto_downloadXsd#act(java.lang.String,org.apache.isis.applib.services.jaxb.JaxbService$IsisSchemas)
+#: org.apache.isis.applib.services.layout.Object_downloadLayoutXml#act(java.lang.String,org.apache.isis.applib.services.layout.LayoutService$Style)
+#: org.apache.isis.core.metamodel.services.jdosupport.Persistable_downloadJdoMetadata#act(java.lang.String)
+msgid "File name"
+msgstr ""
+
+
+#: org.apache.isis.applib.services.swagger.SwaggerServiceMenu#downloadSwaggerSchemaDefinition(java.lang.String,org.apache.isis.applib.services.swagger.SwaggerService$Visibility,org.apache.isis.applib.services.swagger.SwaggerService$Format)
+msgid "Filename"
+msgstr ""
+
+
+#: domainapp.modules.simple.dom.impl.SimpleObjectMenu#findByName()
+#: domainapp.modules.simple.dom.impl.SimpleObjectRepository#findByName()
+msgid "Find By Name"
+msgstr ""
+
+
+#: org.apache.isis.applib.fixturescripts.FixtureResult#fixtureScriptClassName
+msgid "Fixture script"
+msgstr ""
+
+
+#: org.apache.isis.applib.fixturescripts.FixtureScript#friendlyName
+msgid "Friendly Name"
+msgstr ""
+
+
+#: org.apache.isis.applib.services.hsqldb.HsqlDbManagerMenu#hsqlDbManager()
+msgid "HSQL DB Manager"
+msgstr ""
+
+
+#: org.apache.isis.core.metamodel.services.jdosupport.Persistable_datanucleusIdLong#prop()
+msgid "Id"
+msgstr ""
+
+
+#: org.apache.isis.applib.annotation.SemanticsOf#IDEMPOTENT
+msgid "Idempotent"
+msgstr ""
+
+
+#: org.apache.isis.applib.annotation.SemanticsOf#IDEMPOTENT_ARE_YOU_SURE
+msgid "Idempotent Are You Sure"
+msgstr ""
+
+
+#: org.apache.isis.applib.services.jaxb.JaxbService$IsisSchemas#IGNORE
+msgid "Ignore"
+msgstr ""
+
+
+#: org.apache.isis.applib.services.jaxb.JaxbService$IsisSchemas#INCLUDE
+msgid "Include"
+msgstr ""
+
+
+#: org.apache.isis.applib.services.swagger.SwaggerService$Format#JSON
+msgid "Json"
+msgstr ""
+
+
+#: org.apache.isis.applib.services.config.ConfigurationProperty#key
+msgid "Key"
+msgstr ""
+
+
+#: domainapp.modules.simple.dom.impl.SimpleObjectMenu#listAll()
+#: domainapp.modules.simple.dom.impl.SimpleObjectRepository#listAll()
+msgid "List All"
+msgstr ""
+
+
+#: org.apache.isis.core.metamodel.services.jdosupport.Persistable_datanucleusIdLong
+#: org.apache.isis.core.metamodel.services.jdosupport.Persistable_datanucleusVersionLong
+#: org.apache.isis.core.metamodel.services.jdosupport.Persistable_datanucleusVersionTimestamp
+msgid "Metadata"
+msgstr ""
+
+
+#: org.apache.isis.applib.services.layout.LayoutService$Style#MINIMAL
+msgid "Minimal"
+msgstr ""
+
+
+#: domainapp.modules.simple.dom.impl.SimpleObject#name
+#: domainapp.modules.simple.dom.impl.SimpleObject#updateName(java.lang.String)
+#: domainapp.modules.simple.dom.impl.SimpleObjectMenu#create(java.lang.String)
+#: domainapp.modules.simple.dom.impl.SimpleObjectMenu#findByName(java.lang.String)
+msgid "Name"
+msgstr ""
+
+
+#: org.apache.isis.core.metamodel.services.appfeat.ApplicationFeatureFactory#newApplicationFeature()
+msgid "New Application Feature"
+msgstr ""
+
+
+#: org.apache.isis.applib.annotation.SemanticsOf#NON_IDEMPOTENT
+msgid "Non Idempotent"
+msgstr ""
+
+
+#: org.apache.isis.applib.annotation.SemanticsOf#NON_IDEMPOTENT_ARE_YOU_SURE
+msgid "Non Idempotent Are You Sure"
+msgstr ""
+
+
+#: org.apache.isis.applib.services.layout.LayoutService$Style#NORMALIZED
+msgid "Normalized"
+msgstr ""
+
+
+#: domainapp.modules.simple.dom.impl.SimpleObject#notes
+msgid "Notes"
+msgstr ""
+
+
+#: org.apache.isis.applib.fixturescripts.FixtureScripts#runFixtureScript(org.apache.isis.applib.fixturescripts.FixtureScript,java.lang.String)
+#: org.apache.isis.applib.services.fixturespec.FixtureScriptsDefault#runFixtureScript(org.apache.isis.applib.fixturescripts.FixtureScript,java.lang.String)
+#: org.apache.isis.applib.services.fixturespec.FixtureScriptsDefault#runFixtureScriptWithAutoComplete(org.apache.isis.applib.fixturescripts.FixtureScript,java.lang.String)
+msgid "Parameters"
+msgstr ""
+
+
+#: org.apache.isis.applib.services.swagger.SwaggerService$Visibility#PRIVATE
+msgid "Private"
+msgstr ""
+
+
+#: org.apache.isis.applib.services.swagger.SwaggerService$Visibility#PRIVATE_WITH_PROTOTYPING
+msgid "Private With Prototyping"
+msgstr ""
+
+
+#: org.apache.isis.applib.services.bookmark.BookmarkHolder_object#prop()
+msgid "Prop"
+msgstr ""
+
+
+#: org.apache.isis.applib.services.appfeat.ApplicationMemberType#PROPERTY
+msgid "Property"
+msgstr ""
+
+
+#: org.apache.isis.applib.services.fixturespec.FixtureScriptsDefault
+#: org.apache.isis.applib.services.hsqldb.HsqlDbManagerMenu
+#: org.apache.isis.applib.services.layout.LayoutServiceMenu
+#: org.apache.isis.applib.services.metamodel.MetaModelServicesMenu
+#: org.apache.isis.applib.services.swagger.SwaggerServiceMenu
+#: org.apache.isis.core.runtime.services.i18n.po.TranslationServicePoMenu
+msgid "Prototyping"
+msgstr ""
+
+
+#: org.apache.isis.applib.services.swagger.SwaggerService$Visibility#PUBLIC
+msgid "Public"
+msgstr ""
+
+
+#: domainapp.modules.simple.dom.impl.SimpleObject#rebuildMetamodel()
+#: java.io.Serializable#rebuildMetamodel()
+#: java.lang.Comparable#rebuildMetamodel()
+#: java.lang.Iterable#rebuildMetamodel()
+#: java.lang.Object#rebuildMetamodel()
+#: java.util.Collection#rebuildMetamodel()
+#: java.util.List#rebuildMetamodel()
+#: java.util.Set#rebuildMetamodel()
+#: javax.jdo.listener.InstanceLifecycleListener#rebuildMetamodel()
+#: javax.jdo.listener.LoadLifecycleListener#rebuildMetamodel()
+#: javax.jdo.listener.StoreLifecycleListener#rebuildMetamodel()
+#: org.apache.isis.applib.AbstractContainedObject#rebuildMetamodel()
+#: org.apache.isis.applib.AbstractService#rebuildMetamodel()
+#: org.apache.isis.applib.AbstractSubscriber#rebuildMetamodel()
+#: org.apache.isis.applib.AbstractViewModel#rebuildMetamodel()
+#: org.apache.isis.applib.ViewModel#rebuildMetamodel()
+#: org.apache.isis.applib.fixtures.InstallableFixture#rebuildMetamodel()
+#: org.apache.isis.applib.fixturescripts.FixtureResult#rebuildMetamodel()
+#: org.apache.isis.applib.fixturescripts.FixtureScript#rebuildMetamodel()
+#: org.apache.isis.applib.fixturescripts.FixtureScripts#rebuildMetamodel()
+#: org.apache.isis.applib.services.WithTransactionScope#rebuildMetamodel()
+#: org.apache.isis.applib.services.appfeat.ApplicationFeatureRepository#rebuildMetamodel()
+#: org.apache.isis.applib.services.audit.AuditerService#rebuildMetamodel()
+#: org.apache.isis.applib.services.background.BackgroundService#rebuildMetamodel()
+#: org.apache.isis.applib.services.background.BackgroundService2#rebuildMetamodel()
+#: org.apache.isis.applib.services.bookmark.BookmarkService#rebuildMetamodel()
+#: org.apache.isis.applib.services.bookmark.BookmarkService2#rebuildMetamodel()
+#: org.apache.isis.applib.services.classdiscovery.ClassDiscoveryService#rebuildMetamodel()
+#: org.apache.isis.applib.services.classdiscovery.ClassDiscoveryService2#rebuildMetamodel()
+#: org.apache.isis.applib.services.command.spi.CommandService#rebuildMetamodel()
+#: org.apache.isis.applib.services.config.ConfigurationProperty#rebuildMetamodel()
+#: org.apache.isis.applib.services.config.ConfigurationService#rebuildMetamodel()
+#: org.apache.isis.applib.services.email.EmailService#rebuildMetamodel()
+#: org.apache.isis.applib.services.eventbus.EventBusService#rebuildMetamodel()
+#: org.apache.isis.applib.services.exceprecog.ExceptionRecognizer#rebuildMetamodel()
+#: org.apache.isis.applib.services.exceprecog.ExceptionRecognizer2#rebuildMetamodel()
+#: org.apache.isis.applib.services.exceprecog.ExceptionRecognizerComposite#rebuildMetamodel()
+#: org.apache.isis.applib.services.factory.FactoryService#rebuildMetamodel()
+#: org.apache.isis.applib.services.grid.GridLoaderService#rebuildMetamodel()
+#: org.apache.isis.applib.services.grid.GridService#rebuildMetamodel()
+#: org.apache.isis.applib.services.grid.GridSystemService#rebuildMetamodel()
+#: org.apache.isis.applib.services.homepage.HomePageProviderService#rebuildMetamodel()
+#: org.apache.isis.applib.services.i18n.TranslationService#rebuildMetamodel()
+#: org.apache.isis.applib.services.jaxb.JaxbService#rebuildMetamodel()
+#: org.apache.isis.applib.services.jaxb.JaxbService$Simple#rebuildMetamodel()
+#: org.apache.isis.applib.services.jdosupport.IsisJdoSupport#rebuildMetamodel()
+#: org.apache.isis.applib.services.layout.LayoutService#rebuildMetamodel()
+#: org.apache.isis.applib.services.memento.MementoService#rebuildMetamodel()
+#: org.apache.isis.applib.services.message.MessageService#rebuildMetamodel()
+#: org.apache.isis.applib.services.metamodel.MetaModelService#rebuildMetamodel()
+#: org.apache.isis.applib.services.metamodel.MetaModelService2#rebuildMetamodel()
+#: org.apache.isis.applib.services.metamodel.MetaModelService3#rebuildMetamodel()
+#: org.apache.isis.applib.services.metrics.MetricsService#rebuildMetamodel()
+#: org.apache.isis.applib.services.publish.PublisherService#rebuildMetamodel()
+#: org.apache.isis.applib.services.registry.ServiceRegistry#rebuildMetamodel()
+#: org.apache.isis.applib.services.registry.ServiceRegistry2#rebuildMetamodel()
+#: org.apache.isis.applib.services.repository.RepositoryService#rebuildMetamodel()
+#: org.apache.isis.applib.services.routing.RoutingService#rebuildMetamodel()
+#: org.apache.isis.applib.services.sessmgmt.SessionManagementService#rebuildMetamodel()
+#: org.apache.isis.applib.services.sudo.SudoService#rebuildMetamodel()
+#: org.apache.isis.applib.services.sudo.SudoService$Spi#rebuildMetamodel()
+#: org.apache.isis.applib.services.swagger.SwaggerService#rebuildMetamodel()
+#: org.apache.isis.applib.services.tablecol.TableColumnOrderService#rebuildMetamodel()
+#: org.apache.isis.applib.services.title.TitleService#rebuildMetamodel()
+#: org.apache.isis.applib.services.urlencoding.UrlEncodingService#rebuildMetamodel()
+#: org.apache.isis.applib.services.user.UserService#rebuildMetamodel()
+#: org.apache.isis.applib.services.userreg.EmailNotificationService#rebuildMetamodel()
+#: org.apache.isis.applib.services.xactn.TransactionService#rebuildMetamodel()
+#: org.apache.isis.applib.services.xactn.TransactionService2#rebuildMetamodel()
+#: org.apache.isis.applib.services.xmlsnapshot.XmlSnapshotService#rebuildMetamodel()
+#: org.apache.isis.applib.services.xmlsnapshot.XmlSnapshotServiceAbstract#rebuildMetamodel()
+#: org.apache.isis.core.commons.authentication.AuthenticationSessionProvider#rebuildMetamodel()
+#: org.apache.isis.core.commons.components.ApplicationScopedComponent#rebuildMetamodel()
+#: org.apache.isis.core.commons.components.Component#rebuildMetamodel()
+#: org.apache.isis.core.commons.config.IsisConfiguration#rebuildMetamodel()
+#: org.apache.isis.core.metamodel.adapter.mgr.AdapterManager#rebuildMetamodel()
+#: org.apache.isis.core.metamodel.adapter.mgr.AdapterManagerBase#rebuildMetamodel()
+#: org.apache.isis.core.metamodel.deployment.DeploymentCategoryProvider#rebuildMetamodel()
+#: org.apache.isis.core.metamodel.facetapi.MetaModelRefiner#rebuildMetamodel()
+#: org.apache.isis.core.metamodel.facetapi.MetaModelValidatorRefiner#rebuildMetamodel()
+#: org.apache.isis.core.metamodel.services.ServicesInjectorAware#rebuildMetamodel()
+#: org.apache.isis.core.metamodel.services.appfeat.ApplicationFeature#rebuildMetamodel()
+#: org.apache.isis.core.metamodel.services.command.CommandDtoServiceInternal#rebuildMetamodel()
+#: org.apache.isis.core.metamodel.services.configinternal.ConfigurationServiceInternal#rebuildMetamodel()
+#: org.apache.isis.core.metamodel.services.grid.GridSystemServiceAbstract#rebuildMetamodel()
+#: org.apache.isis.core.metamodel.services.ixn.InteractionDtoServiceInternal#rebuildMetamodel()
+#: org.apache.isis.core.metamodel.services.persistsession.PersistenceSessionServiceInternal#rebuildMetamodel()
+#: org.apache.isis.core.metamodel.services.publishing.PublishingServiceInternal#rebuildMetamodel()
+#: org.apache.isis.core.runtime.authentication.AuthenticationManager#rebuildMetamodel()
+#: org.apache.isis.core.runtime.authorization.AuthorizationManager#rebuildMetamodel()
+#: org.apache.isis.core.runtime.authorization.AuthorizationManagerAbstract#rebuildMetamodel()
+#: org.apache.isis.core.runtime.persistence.FixturesInstalledFlag#rebuildMetamodel()
+#: org.apache.isis.core.runtime.services.eventbus.EventBusServiceDefault#rebuildMetamodel()
+#: org.apache.isis.core.runtime.system.transaction.TransactionalClosure#rebuildMetamodel()
+#: org.apache.isis.objectstore.jdo.applib.service.support.IsisJdoSupport#rebuildMetamodel()
+msgid "Rebuild Metamodel"
+msgstr ""
+
+
+#: org.apache.isis.applib.services.fixturespec.FixtureScriptsDefault#recreateObjectsAndReturnFirst()
+msgid "Recreate Objects And Return First"
+msgstr ""
+
+
+#: org.apache.isis.applib.fixturescripts.FixtureResult#object
+msgid "Result"
+msgstr ""
+
+
+#: org.apache.isis.applib.fixturescripts.FixtureResult#className
+msgid "Result class"
+msgstr ""
+
+
+#: org.apache.isis.applib.fixturescripts.FixtureResult#key
+msgid "Result key"
+msgstr ""
+
+
+#: org.apache.isis.applib.fixturescripts.FixtureScript#runFixtureScript()
+#: org.apache.isis.applib.fixturescripts.FixtureScript#runFixtureScriptWithAutoComplete()
+#: org.apache.isis.applib.fixturescripts.FixtureScripts#runFixtureScript()
+#: org.apache.isis.applib.services.fixturespec.FixtureScriptsDefault#runFixtureScript()
+#: org.apache.isis.applib.services.fixturespec.FixtureScriptsDefault#runFixtureScriptWithAutoComplete()
+msgid "Run Fixture Script"
+msgstr ""
+
+
+#: org.apache.isis.applib.annotation.SemanticsOf#SAFE
+msgid "Safe"
+msgstr ""
+
+
+#: org.apache.isis.applib.annotation.SemanticsOf#SAFE_AND_REQUEST_CACHEABLE
+msgid "Safe And Request Cacheable"
+msgstr ""
+
+
+#: org.apache.isis.applib.fixturescripts.FixtureScript
+msgid "Script"
+msgstr ""
+
+
+#: org.apache.isis.applib.fixturescripts.FixtureScripts#runFixtureScript(org.apache.isis.applib.fixturescripts.FixtureScript,java.lang.String)
+#: org.apache.isis.applib.services.fixturespec.FixtureScriptsDefault#runFixtureScript(org.apache.isis.applib.fixturescripts.FixtureScript,java.lang.String)
+#: org.apache.isis.applib.services.fixturespec.FixtureScriptsDefault#runFixtureScriptWithAutoComplete(org.apache.isis.applib.fixturescripts.FixtureScript,java.lang.String)
+msgid "Script-specific parameters (if any).  The format depends on the script implementation (eg key=value, CSV, JSON, XML etc)"
+msgstr ""
+
+
+#: domainapp.modules.simple.dom.impl.SimpleObjectMenu
+msgid "Simple Objects"
+msgstr ""
+
+
+#: org.apache.isis.core.runtime.services.i18n.po.TranslationServicePoMenu#switchToReadingTranslations()
+msgid "Switch To Reading Translations"
+msgstr ""
+
+
+#: org.apache.isis.core.runtime.services.i18n.po.TranslationServicePoMenu#switchToWritingTranslations()
+msgid "Switch To Writing Translations"
+msgstr ""
+
+
+#: domainapp.modules.simple.dom.impl.SimpleObject#updateName()
+msgid "Update Name"
+msgstr ""
+
+
+#: org.apache.isis.applib.services.config.ConfigurationProperty#value
+msgid "Value"
+msgstr ""
+
+
+#: org.apache.isis.core.metamodel.services.jdosupport.Persistable_datanucleusVersionLong#prop()
+#: org.apache.isis.core.metamodel.services.jdosupport.Persistable_datanucleusVersionTimestamp#prop()
+msgid "Version"
+msgstr ""
+
+
+#: org.apache.isis.applib.services.swagger.SwaggerService$Format#YAML
+msgid "Yaml"
+msgstr ""
+
+
+#: org.apache.isis.applib.services.layout.Object_downloadLayoutXml
+#: org.apache.isis.applib.services.layout.Object_rebuildMetamodel
+#: org.apache.isis.core.metamodel.services.jdosupport.Persistable_downloadJdoMetadata
+msgid "datanucleusIdLong"
+msgstr ""
+
+
+
+
+
+##############################################################################
+# end of .pot file
+##############################################################################
+
+[INFO] shutting down org.apache.isis.core.metamodel.specloader.SpecificationLoader@8cd2bb5
+[INFO] 
+[INFO] --- maven-jar-plugin:2.4:jar (default-jar) @ ziemozi-module-simple ---
+[INFO] Building jar: /Users/jamesagada/Development/isis/ziemozi/module-simple/target/ziemozi-module-simple-1.0-SNAPSHOT.jar
+[INFO] 
+[INFO] --- maven-jar-plugin:2.4:test-jar (package-test-jar) @ ziemozi-module-simple ---
+[INFO] Building jar: /Users/jamesagada/Development/isis/ziemozi/module-simple/target/ziemozi-module-simple-1.0-SNAPSHOT-tests.jar
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.19.1:test (integ-test) @ ziemozi-module-simple ---
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running domainapp.modules.simple.integtests.tests.SimpleObject_IntegTest$DataNucleusId
+09:21:17,421  [IsisConfigurationDefault main       INFO ]  adding isis.persistor.datanucleus.impl.javax.jdo.option.ConnectionPassword = *******
+09:21:17,422  [IsisConfigurationDefault main       INFO ]  adding isis.persistor.datanucleus.impl.datanucleus.cache.level2.mode = ENABLE_SELECTIVE
+09:21:17,422  [IsisConfigurationDefault main       INFO ]  adding isis.persistor.datanucleus.impl.datanucleus.schema.validateAll = false
+09:21:17,422  [IsisConfigurationDefault main       INFO ]  adding isis.persistor.datanucleus.impl.javax.jdo.option.ConnectionUserName = sa
+09:21:17,422  [IsisConfigurationDefault main       INFO ]  adding isis.persistor.datanucleus.impl.datanucleus.cache.level2.type = none
+09:21:17,422  [IsisConfigurationDefault main       INFO ]  adding isis.persistor.enforceSafeSemantics = false
+09:21:17,422  [IsisConfigurationDefault main       INFO ]  adding isis.persistor.datanucleus.impl.javax.jdo.option.ConnectionURL = jdbc:hsqldb:mem:test
+09:21:17,422  [IsisConfigurationDefault main       INFO ]  adding isis.persistor.datanucleus.impl.datanucleus.persistenceByReachabilityAtCommit = false
+09:21:17,423  [IsisConfigurationDefault main       INFO ]  adding isis.persistor.datanucleus.impl.datanucleus.identifier.case = MixedCase
+09:21:17,423  [IsisConfigurationDefault main       INFO ]  adding isis.persistor.datanucleus.impl.datanucleus.schema.autoCreateAll = true
+09:21:17,423  [IsisConfigurationDefault main       INFO ]  adding isis.services.eventbus.allowLateRegistration = true
+09:21:17,423  [IsisConfigurationDefault main       INFO ]  adding isis.persistor.datanucleus.install-fixtures = true
+09:21:17,423  [IsisConfigurationDefault main       INFO ]  adding isis.deploymentType = server_prototype
+09:21:17,423  [IsisConfigurationDefault main       INFO ]  adding isis.persistor.datanucleus.impl.javax.jdo.option.ConnectionDriverName = org.hsqldb.jdbcDriver
+09:21:17,435  [IsisConfigurationDefault main       INFO ]  adding isis.appManifest = org.apache.isis.applib.AppManifestAbstract$Builder$1
+14    [IsisConfigurationDefault  main       INFO ]  adding isis.appManifest = org.apache.isis.applib.AppManifestAbstract$Builder$1
+09:21:17,849  [Reflections          main       INFO ]  Reflections took 355 ms to scan 6 urls, producing 277 keys and 1337 values 
+428   [Reflections               main       INFO ]  Reflections took 355 ms to scan 6 urls, producing 277 keys and 1337 values 
+09:21:18,121  [IsisConfigurationDefault main       INFO ]  adding isis.services.ServicesInstallerFromAnnotation.packagePrefix = domainapp.modules.simple.dom,domainapp.modules.simple.fixture
+700   [IsisConfigurationDefault  main       INFO ]  adding isis.services.ServicesInstallerFromAnnotation.packagePrefix = domainapp.modules.simple.dom,domainapp.modules.simple.fixture
+09:21:18,121  [IsisConfigurationDefault main       INFO ]  adding isis.persistor.datanucleus.RegisterEntities.packagePrefix = domainapp.modules.simple.dom,domainapp.modules.simple.fixture
+700   [IsisConfigurationDefault  main       INFO ]  adding isis.persistor.datanucleus.RegisterEntities.packagePrefix = domainapp.modules.simple.dom,domainapp.modules.simple.fixture
+09:21:18,122  [IsisConfigurationDefault main       INFO ]  adding isis.services = 
+701   [IsisConfigurationDefault  main       INFO ]  adding isis.services = 
+09:21:18,122  [IsisConfigurationDefault main       INFO ]  adding isis.objects.editing = false
+701   [IsisConfigurationDefault  main       INFO ]  adding isis.objects.editing = false
+09:21:18,131  [ServicesInstallerFromConfigurationAndAnnotation main       INFO ]  installing org.apache.isis.core.runtime.services.ServicesInstallerFromConfigurationAndAnnotation
+710   [onfigurationAndAnnotation main       INFO ]  installing org.apache.isis.core.runtime.services.ServicesInstallerFromConfigurationAndAnnotation
+09:21:18,377  [IsisConfigurationDefault main       INFO ]  adding isis.fixtures = 
+956   [IsisConfigurationDefault  main       INFO ]  adding isis.fixtures = 
+09:21:18,381  [IsisSessionFactoryBuilder main       INFO ]  initialising Isis System
+960   [IsisSessionFactoryBuilder main       INFO ]  initialising Isis System
+09:21:18,382  [IsisSessionFactoryBuilder main       INFO ]  working directory: /Users/jamesagada/Development/isis/ziemozi/module-simple/.
+961   [IsisSessionFactoryBuilder main       INFO ]  working directory: /Users/jamesagada/Development/isis/ziemozi/module-simple/.
+09:21:18,382  [IsisSessionFactoryBuilder main       INFO ]  resource stream source: null
+961   [IsisSessionFactoryBuilder main       INFO ]  resource stream source: null
+09:21:18,709  [FacetedMethodsBuilder main       INFO ]  introspecting org.apache.isis.core.runtime.system.session.IsisSessionFactory: class-level details
+1288  [FacetedMethodsBuilder     main       INFO ]  introspecting org.apache.isis.core.runtime.system.session.IsisSessionFactory: class-level details
+09:21:18,787  [FacetedMethodsBuilder main       INFO ]  introspecting java.lang.Object: class-level details
+1366  [FacetedMethodsBuilder     main       INFO ]  introspecting java.lang.Object: class-level details
+09:21:18,798  [FacetedMethodsBuilder main       INFO ]  introspecting org.apache.isis.core.commons.components.ApplicationScopedComponent: class-level details
+1377  [FacetedMethodsBuilder     main       INFO ]  introspecting org.apache.isis.core.commons.components.ApplicationScopedComponent: class-level details
+09:21:18,800  [FacetedMethodsBuilder main       INFO ]  introspecting org.apache.isis.core.commons.components.Component: class-level details
+1379  [FacetedMethodsBuilder     main       INFO ]  introspecting org.apache.isis.core.commons.components.Component: class-level details
+09:21:18,803  [FacetedMethodsBuilder main       INFO ]  introspecting org.apache.isis.core.runtime.system.persistence.PersistenceSessionFactory: class-level details
+1382  [FacetedMethodsBuilder     main       INFO ]  introspecting org.apache.isis.core.runtime.system.persistence.PersistenceSessionFactory: class-level details
+09:21:18,808  [FacetedMethodsBuilder main       INFO ]  introspecting org.apache.isis.core.runtime.persistence.FixturesInstalledFlag: class-level details
+1387  [FacetedMethodsBuilder     main       INFO ]  introspecting org.apache.isis.core.runtime.persistence.FixturesInstalledFlag: class-level details
+09:21:18,810  [FacetedMethodsBuilder main       INFO ]  introspecting org.apache.isis.core.metamodel.specloader.SpecificationLoader: class-level details
+1389  [FacetedMethodsBuilder     main       INFO ]  introspecting org.apache.isis.core.metamodel.specloader.SpecificationLoader: class-level details
+09:21:18,818  [FacetedMethodsBuilder main       INFO ]  introspecting org.apache.isis.core.runtime.authorization.standard.AuthorizationManagerStandard: class-level details
+1397  [FacetedMethodsBuilder     main       INFO ]  introspecting org.apache.isis.core.runtime.authorization.standard.AuthorizationManagerStandard: class-level details
+09:21:18,822  [FacetedMethodsBuilder main       INFO ]  introspecting org.apache.isis.core.runtime.authorization.AuthorizationManagerAbstract: class-level details
+1401  [FacetedMethodsBuilder     main       INFO ]  introspecting org.apache.isis.core.runtime.authorization.AuthorizationManagerAbstract: class-level details
+09:21:18,828  [FacetedMethodsBuilder main       INFO ]  introspecting org.apache.isis.core.runtime.authorization.AuthorizationManager: class-level details
+1407  [FacetedMethodsBuilder     main       INFO ]  introspecting org.apache.isis.core.runtime.authorization.AuthorizationManager: class-level details
+09:21:18,833  [FacetedMethodsBuilder main       INFO ]  introspecting org.apache.isis.core.metamodel.facetapi.MetaModelRefiner: class-level details
+1412  [FacetedMethodsBuilder     main       INFO ]  introspecting org.apache.isis.core.metamodel.facetapi.MetaModelRefiner: class-level details
+09:21:18,843  [FacetedMethodsBuilder main       INFO ]  introspecting org.apache.isis.core.metamodel.facetapi.MetaModelValidatorRefiner: class-level details
+1422  [FacetedMethodsBuilder     main       INFO ]  introspecting org.apache.isis.core.metamodel.facetapi.MetaModelValidatorRefiner: class-level details
+09:21:18,845  [FacetedMethodsBuilder main       INFO ]  introspecting org.apache.isis.core.runtime.authentication.standard.AuthenticationManagerStandard: class-level details
+1424  [FacetedMethodsBuilder     main       INFO ]  introspecting org.apache.isis.core.runtime.authentication.standard.AuthenticationManagerStandard: class-level details
+09:21:18,855  [FacetedMethodsBuilder main       INFO ]  introspecting org.apache.isis.core.runtime.authentication.AuthenticationManager: class-level details
+1434  [FacetedMethodsBuilder     main       INFO ]  introspecting org.apache.isis.core.runtime.authentication.AuthenticationManager: class-level details
+09:21:18,871  [FacetedMethodsBuilder main       INFO ]  introspecting org.apache.isis.applib.services.fixturespec.FixtureScriptsDefault: class-level details
+1450  [FacetedMethodsBuilder     main       INFO ]  introspecting org.apache.isis.applib.services.fixturespec.FixtureScriptsDefault: class-level details
+09:21:18,893  [FacetedMethodsBuilder main       INFO ]  introspecting org.apache.isis.applib.fixturescripts.FixtureScripts: class-level details
+1472  [FacetedMethodsBuilder     main       INFO ]  introspecting org.apache.isis.applib.fixturescripts.FixtureScripts: class-level details
+09:21:18,896  [FacetedMethodsBuilder main       INFO ]  introspecting org.apache.isis.applib.AbstractService: class-level details
+1475  [FacetedMethodsBuilder     main       INFO ]  introspecting org.apache.isis.applib.AbstractService: class-level details
+09:21:18,898  [FacetedMethodsBuilder main       INFO ]  introspecting org.apache.isis.applib.AbstractContainedObject: class-level details
+1477  [FacetedMethodsBuilder     main       INFO ]  introspecting org.apache.isis.applib.AbstractContainedObject: class-level details
+09:21:18,904  [FacetedMethodsBuilder main       INFO ]  introspecting java.util.List: class-level details
+1483  [FacetedMethodsBuilder     main       INFO ]  introspecting java.util.List: class-level details
+09:21:18,914  [FacetedMethodsBuilder main       INFO ]  introspecting java.util.Collection: class-level details
+1493  [FacetedMethodsBuilder     main       INFO ]  introspecting java.util.Collection: class-level details
+09:21:18,917  [FacetedMethodsBuilder main       INFO ]  introspecting java.lang.Iterable: class-level details
+1496  [FacetedMethodsBuilder     main       INFO ]  introspecting java.lang.Iterable: class-level details
+09:21:18,919  [FacetedMethodsBuilder main       INFO ]  introspecting org.apache.isis.applib.fixturescripts.FixtureResult: class-level details
+1498  [FacetedMethodsBuilder     main       INFO ]  introspecting org.apache.isis.applib.fixturescripts.FixtureResult: class-level details
+09:21:18,945  [FacetedMethodsBuilder main       INFO ]  introspecting java.lang.String: class-level details
+1524  [FacetedMethodsBuilder     main       INFO ]  introspecting java.lang.String: class-level details
+09:21:19,042  [FacetedMethodsBuilder main       INFO ]  introspecting org.apache.isis.applib.fixturescripts.FixtureScript: class-level details
+1621  [FacetedMethodsBuilder     main       INFO ]  introspecting org.apache.isis.applib.fixturescripts.FixtureScript: class-level details
+09:21:19,057  [FacetedMethodsBuilder main       INFO ]  introspecting org.apache.isis.applib.AbstractViewModel: class-level details
+1636  [FacetedMethodsBuilder     main       INFO ]  introspecting org.apache.isis.applib.AbstractViewModel: class-level details
+09:21:19,063  [FacetedMethodsBuilder main       INFO ]  introspecting org.apache.isis.applib.ViewModel: class-level details
+1642  [FacetedMethodsBuilder     main       INFO ]  introspecting org.apache.isis.applib.ViewModel: class-level details
+09:21:19,071  [FacetedMethodsBuilder main       INFO ]  introspecting org.apache.isis.applib.fixtures.InstallableFixture: class-level details
+1650  [FacetedMethodsBuilder     main       INFO ]  introspecting org.apache.isis.applib.fixtures.InstallableFixture: class-level details
+09:21:19,183  [FacetedMethodsBuilder main       INFO ]  introspecting boolean: class-level details
+1762  [FacetedMethodsBuilder     main       INFO ]  introspecting boolean: class-level details
+09:21:19,210  [FacetedMethodsBuilder main       INFO ]  introspecting org.apache.isis.objectstore.jdo.datanucleus.IsisConfigurationForJdoIntegTests: class-level details
+1789  [FacetedMethodsBuilder     main       INFO ]  introspecting org.apache.isis.objectstore.jdo.datanucleus.IsisConfigurationForJdoIntegTests: class-level details
+09:21:19,213  [IsisConfigurationDefault main       INFO ]  adding isis.persistor.datanucleus.impl.javax.jdo.option.ConnectionPassword = *******
+1792  [IsisConfigurationDefault  main       INFO ]  adding isis.persistor.datanucleus.impl.javax.jdo.option.ConnectionPassword = *******
+09:21:19,213  [IsisConfigurationDefault main       INFO ]  adding isis.persistor.datanucleus.impl.datanucleus.cache.level2.mode = ENABLE_SELECTIVE
+1792  [IsisConfigurationDefault  main       INFO ]  adding isis.persistor.datanucleus.impl.datanucleus.cache.level2.mode = ENABLE_SELECTIVE
+09:21:19,213  [IsisConfigurationDefault main       INFO ]  adding isis.persistor.datanucleus.impl.datanucleus.schema.validateAll = false
+1792  [IsisConfigurationDefault  main       INFO ]  adding isis.persistor.datanucleus.impl.datanucleus.schema.validateAll = false
+09:21:19,213  [IsisConfigurationDefault main       INFO ]  adding isis.persistor.datanucleus.impl.javax.jdo.option.ConnectionUserName = sa
+1792  [IsisConfigurationDefault  main       INFO ]  adding isis.persistor.datanucleus.impl.javax.jdo.option.ConnectionUserName = sa
+09:21:19,213  [IsisConfigurationDefault main       INFO ]  adding isis.persistor.datanucleus.impl.datanucleus.cache.level2.type = none
+1792  [IsisConfigurationDefault  main       INFO ]  adding isis.persistor.datanucleus.impl.datanucleus.cache.level2.type = none
+09:21:19,213  [IsisConfigurationDefault main       INFO ]  adding isis.persistor.enforceSafeSemantics = false
+1792  [IsisConfigurationDefault  main       INFO ]  adding isis.persistor.enforceSafeSemantics = false
+09:21:19,214  [IsisConfigurationDefault main       INFO ]  adding isis.persistor.datanucleus.impl.javax.jdo.option.ConnectionURL = jdbc:hsqldb:mem:test
+1793  [IsisConfigurationDefault  main       INFO ]  adding isis.persistor.datanucleus.impl.javax.jdo.option.ConnectionURL = jdbc:hsqldb:mem:test
+09:21:19,214  [IsisConfigurationDefault main       INFO ]  adding isis.persistor.datanucleus.impl.datanucleus.persistenceByReachabilityAtCommit = false
+1793  [IsisConfigurationDefault  main       INFO ]  adding isis.persistor.datanucleus.impl.datanucleus.persistenceByReachabilityAtCommit = false
+09:21:19,215  [IsisConfigurationDefault main       INFO ]  adding isis.persistor.datanucleus.impl.datanucleus.identifier.case = MixedCase
+1794  [IsisConfigurationDefault  main       INFO ]  adding isis.persistor.datanucleus.impl.datanucleus.identifier.case = MixedCase
+09:21:19,215  [IsisConfigurationDefault main       INFO ]  adding isis.persistor.datanucleus.impl.datanucleus.schema.autoCreateAll = true
+1794  [IsisConfigurationDefault  main       INFO ]  adding isis.persistor.datanucleus.impl.datanucleus.schema.autoCreateAll = true
+09:21:19,217  [IsisConfigurationDefault main       INFO ]  adding isis.services.eventbus.allowLateRegistration = true
+1796  [IsisConfigurationDefault  main       INFO ]  adding isis.services.eventbus.allowLateRegistration = true
+09:21:19,217  [IsisConfigurationDefault main       INFO ]  adding isis.persistor.datanucleus.install-fixtures = true
+1796  [IsisConfigurationDefault  main       INFO ]  adding isis.persistor.datanucleus.install-fixtures = true
+09:21:19,217  [IsisConfigurationDefault main       INFO ]  adding isis.deploymentType = server_prototype
+1796  [IsisConfigurationDefault  main       INFO ]  adding isis.deploymentType = server_prototype
+09:21:19,217  [IsisConfigurationDefault main       INFO ]  adding isis.persistor.datanucleus.impl.javax.jdo.option.ConnectionDriverName = org.hsqldb.jdbcDriver
+1796  [IsisConfigurationDefault  main       INFO ]  adding isis.persistor.datanucleus.impl.javax.jdo.option.ConnectionDriverName = org.hsqldb.jdbcDriver
+09:21:19,226  [FacetedMethodsBuilder main       INFO ]  introspecting org.apache.isis.core.commons.config.IsisConfigurationDefault: class-level details
+1805  [FacetedMethodsBuilder     main       INFO ]  introspecting org.apache.isis.core.commons.config.IsisConfigurationDefault: class-level details
+09:21:19,232  [FacetedMethodsBuilder main       INFO ]  introspecting org.apache.isis.core.metamodel.services.configinternal.ConfigurationServiceInternal: class-level details
+1811  [FacetedMethodsBuilder     main       INFO ]  introspecting org.apache.isis.core.metamodel.services.configinternal.ConfigurationServiceInternal: class-level details
+09:21:19,237  [FacetedMethodsBuilder main       INFO ]  introspecting org.apache.isis.core.commons.config.IsisConfiguration: class-level details
+1816  [FacetedMethodsBuilder     main       INFO ]  introspecting org.apache.isis.core.commons.config.IsisConfiguration: class-level details
+09:21:19,242  [FacetedMethodsBuilder main       INFO ]  introspecting org.apache.isis.core.runtime.services.deplcat.DeploymentCategoryProviderDefault: class-level details
+1821  [FacetedMethodsBuilder     main       INFO ]  introspecting org.apache.isis.core.runtime.services.deplcat.DeploymentCategoryProviderDefault: class-level details
+09:21:19,244  [FacetedMethodsBuilder main       INFO ]  introspecting org.apache.isis.core.metamodel.deployment.DeploymentCategoryProvider: class-level details
+1823  [FacetedMethodsBuilder     main       INFO ]  introspecting org.apache.isis.core.metamodel.deployment.DeploymentCategoryProvider: class-level details
+09:21:19,246  [FacetedMethodsBuilder main       INFO ]  introspecting org.apache.isis.objectstore.jdo.datanucleus.service.eventbus.EventBusServiceJdo: class-level details
+1825  [FacetedMethodsBuilder     main       INFO ]  introspecting org.apache.isis.objectstore.jdo.datanucleus.service.eventbus.EventBusServiceJdo: class-level details
+09:21:19,253  [FacetedMethodsBuilder main       INFO ]  introspecting org.apache.isis.core.runtime.services.eventbus.EventBusServiceDefault: class-level details
+1832  [FacetedMethodsBuilder     main       INFO ]  introspecting org.apache.isis.core.runtime.services.eventbus.EventBusServiceDefault: class-level details
+09:21:19,256  [FacetedMethodsBuilder main       INFO ]  introspecting org.apache.isis.applib.services.eventbus.EventBusService: class-level details
+1835  [FacetedMethodsBuilder     main       INFO ]  introspecting org.apache.isis.applib.services.eventbus.EventBusService: class-level details
+09:21:19,263  [FacetedMethodsBuilder main       INFO ]  introspecting org.apache.isis.applib.services.queryresultscache.QueryResultsCache$Control: class-level details
+1842  [FacetedMethodsBuilder     main       INFO ]  introspecting org.apache.isis.applib.services.queryresultscache.QueryResultsCache$Control: class-level details
+09:21:19,266  [FacetedMethodsBuilder main       INFO ]  introspecting org.apache.isis.applib.AbstractSubscriber: class-level details
+1845  [FacetedMethodsBuilder     main       INFO ]  introspecting org.apache.isis.applib.AbstractSubscriber: class-level details
+09:21:19,268  [FacetedMethodsBuilder main       INFO ]  introspecting domainapp.modules.simple.dom.impl.SimpleObjectMenu: class-level details
+1847  [FacetedMethodsBuilder     main       INFO ]  introspecting domainapp.modules.simple.dom.impl.SimpleObjectMenu: class-level details
+09:21:19,272  [FacetedMethodsBuilder main       INFO ]  introspecting domainapp.modules.simple.dom.impl.SimpleObject: class-level details
+1851  [FacetedMethodsBuilder     main       INFO ]  introspecting domainapp.modules.simple.dom.impl.SimpleObject: class-level details
+09:21:19,289  [FacetedMethodsBuilder main       INFO ]  introspecting java.lang.Comparable: class-level details
+1868  [FacetedMethodsBuilder     main       INFO ]  introspecting java.lang.Comparable: class-level details
+09:21:19,296  [FacetedMethodsBuilder main       INFO ]  introspecting void: class-level details
+1875  [FacetedMethodsBuilder     main       INFO ]  introspecting void: class-level details
+09:21:19,312  [FacetedMethodsBuilder main       INFO ]  introspecting domainapp.modules.simple.dom.impl.SimpleObjectRepository: class-level details
+1891  [FacetedMethodsBuilder     main       INFO ]  introspecting domainapp.modules.simple.dom.impl.SimpleObjectRepository: class-level details
+09:21:19,317  [FacetedMethodsBuilder main       INFO ]  introspecting org.apache.isis.applib.services.config.ConfigurationServiceMenu: class-level details
+1896  [FacetedMethodsBuilder     main       INFO ]  introspecting org.apache.isis.applib.services.config.ConfigurationServiceMenu: class-level details
+09:21:19,320  [FacetedMethodsBuilder main       INFO ]  introspecting java.util.Set: class-level details
+1899  [FacetedMethodsBuilder     main       INFO ]  introspecting java.util.Set: class-level details
+09:21:19,322  [FacetedMethodsBuilder main       INFO ]  introspecting org.apache.isis.applib.services.config.ConfigurationProperty: class-level details
+1901  [FacetedMethodsBuilder     main       INFO ]  introspecting org.apache.isis.applib.services.config.ConfigurationProperty: class-level details
+09:21:19,333  [FacetedMethodsBuilder main       INFO ]  introspecting org.apache.isis.applib.services.hsqldb.HsqlDbManagerMenu: class-level details
+1912  [FacetedMethodsBuilder     main       INFO ]  introspecting org.apache.isis.applib.services.hsqldb.HsqlDbManagerMenu: class-level details
+09:21:19,337  [FacetedMethodsBuilder main       INFO ]  introspecting org.apache.isis.applib.services.layout.LayoutServiceMenu: class-level details
+1916  [FacetedMethodsBuilder     main       INFO ]  introspecting org.apache.isis.applib.services.layout.LayoutServiceMenu: class-level details
+09:21:19,340  [FacetedMethodsBuilder main       INFO ]  introspecting org.apache.isis.applib.value.Blob: class-level details
+1919  [FacetedMethodsBuilder     main       INFO ]  introspecting org.apache.isis.applib.value.Blob: class-level details
+09:21:19,343  [FacetedMethodsBuilder main       INFO ]  introspecting org.apache.isis.applib.services.layout.LayoutService$Style: class-level details
+1922  [FacetedMethodsBuilder     main       INFO ]  introspecting org.apache.isis.applib.services.layout.LayoutService$Style: class-level details
+09:21:19,350  [FacetedMethodsBuilder main       INFO ]  introspecting org.apache.isis.applib.services.metamodel.MetaModelServicesMenu: class-level details
+1929  [FacetedMethodsBuilder     main       INFO ]  introspecting org.apache.isis.applib.services.metamodel.MetaModelServicesMenu: class-level details
+09:21:19,356  [FacetedMethodsBuilder main       INFO ]  introspecting org.apache.isis.applib.value.Clob: class-level details
+1935  [FacetedMethodsBuilder     main       INFO ]  introspecting org.apache.isis.applib.value.Clob: class-level details
+09:21:19,360  [FacetedMethodsBuilder main       INFO ]  introspecting org.apache.isis.applib.services.swagger.SwaggerServiceMenu: class-level details
+1939  [FacetedMethodsBuilder     main       INFO ]  introspecting org.apache.isis.applib.services.swagger.SwaggerServiceMenu: class-level details
+09:21:19,363  [FacetedMethodsBuilder main       INFO ]  introspecting org.apache.isis.applib.services.swagger.SwaggerService$Visibility: class-level details
+1942  [FacetedMethodsBuilder     main       INFO ]  introspecting org.apache.isis.applib.services.swagger.SwaggerService$Visibility: class-level details
+09:21:19,366  [FacetedMethodsBuilder main       INFO ]  introspecting org.apache.isis.applib.services.swagger.SwaggerService$Format: class-level details
+1945  [FacetedMethodsBuilder     main       INFO ]  introspecting org.apache.isis.applib.services.swagger.SwaggerService$Format: class-level details
+09:21:19,373  [FacetedMethodsBuilder main       INFO ]  introspecting org.apache.isis.core.runtime.services.i18n.po.TranslationServicePoMenu: class-level details
+1952  [FacetedMethodsBuilder     main       INFO ]  introspecting org.apache.isis.core.runtime.services.i18n.po.TranslationServicePoMenu: class-level details
+09:21:19,385  [FacetedMethodsBuilder main       INFO ]  introspecting org.apache.isis.core.runtime.services.message.MessageServiceDefault: class-level details
+1964  [FacetedMethodsBuilder     main       INFO ]  introspecting org.apache.isis.core.runtime.services.message.MessageServiceDefault: class-level details
+09:21:19,389  [FacetedMethodsBuilder main       INFO ]  introspecting org.apache.isis.applib.services.message.MessageService: class-level details
+1968  [FacetedMethodsBuilder     main       INFO ]  introspecting org.apache.isis.applib.services.message.MessageService: class-level details
+09:21:19,390  [FacetedMethodsBuilder main       INFO ]  introspecting org.apache.isis.core.runtime.services.persistsession.PersistenceSessionServiceInternalDefault: class-level details
+1969  [FacetedMethodsBuilder     main       INFO ]  introspecting org.apache.isis.core.runtime.services.persistsession.PersistenceSessionServiceInternalDefault: class-level details
+09:21:19,396  [FacetedMethodsBuilder main       INFO ]  introspecting org.apache.isis.core.metamodel.services.persistsession.PersistenceSessionServiceInternal: class-level details
+1975  [FacetedMethodsBuilder     main       INFO ]  introspecting org.apache.isis.core.metamodel.services.persistsession.PersistenceSessionServiceInternal: class-level details
+09:21:19,398  [FacetedMethodsBuilder main       INFO ]  introspecting org.apache.isis.core.metamodel.adapter.mgr.AdapterManager: class-level details
+1977  [FacetedMethodsBuilder     main       INFO ]  introspecting org.apache.isis.core.metamodel.adapter.mgr.AdapterManager: class-level details
+09:21:19,399  [FacetedMethodsBuilder main       INFO ]  introspecting org.apache.isis.core.metamodel.adapter.mgr.AdapterManagerBase: class-level details
+1978  [FacetedMethodsBuilder     main       INFO ]  introspecting org.apache.isis.core.metamodel.adapter.mgr.AdapterManagerBase: class-level details
+09:21:19,401  [FacetedMethodsBuilder main       INFO ]  introspecting org.apache.isis.core.runtime.system.transaction.TransactionalClosure: class-level details
+1980  [FacetedMethodsBuilder     main       INFO ]  introspecting org.apache.isis.core.runtime.system.transaction.TransactionalClosure: class-level details
+09:21:19,408  [FacetedMethodsBuilder main       INFO ]  introspecting org.apache.isis.applib.annotation.Bulk$InteractionContext: class-level details
+1987  [FacetedMethodsBuilder     main       INFO ]  introspecting org.apache.isis.applib.annotation.Bulk$InteractionContext: class-level details
+09:21:19,412  [FacetedMethodsBuilder main       INFO ]  introspecting org.apache.isis.applib.fixturescripts.ExecutionParametersService: class-level details
+1991  [FacetedMethodsBuilder     main       INFO ]  introspecting org.apache.isis.applib.fixturescripts.ExecutionParametersService: class-level details
+09:21:19,414  [FacetedMethodsBuilder main       INFO ]  introspecting org.apache.isis.applib.services.actinvoc.ActionInvocationContext: class-level details
+1993  [FacetedMethodsBuilder     main       INFO ]  introspecting org.apache.isis.applib.services.actinvoc.ActionInvocationContext: class-level details
+09:21:19,424  [FacetedMethodsBuilder main       INFO ]  introspecting org.apache.isis.applib.services.audit.AuditerServiceLogging: class-level details
+2003  [FacetedMethodsBuilder     main       INFO ]  introspecting org.apache.isis.applib.services.audit.AuditerServiceLogging: class-level details
+09:21:19,426  [FacetedMethodsBuilder main       INFO ]  introspecting org.apache.isis.applib.services.audit.AuditerService: class-level details
+2005  [FacetedMethodsBuilder     main       INFO ]  introspecting org.apache.isis.applib.services.audit.AuditerService: class-level details
+09:21:19,427  [FacetedMethodsBuilder main       INFO ]  introspecting org.apache.isis.applib.services.classdiscovery.ClassDiscoveryServiceUsingReflections: class-level details
+2006  [FacetedMethodsBuilder     main       INFO ]  introspecting org.apache.isis.applib.services.classdiscovery.ClassDiscoveryServiceUsingReflections: class-level details
+09:21:19,433  [FacetedMethodsBuilder main       INFO ]  introspecting org.apache.isis.applib.services.classdiscovery.ClassDiscoveryService2: class-level details
+2012  [FacetedMethodsBuilder     main       INFO ]  introspecting org.apache.isis.applib.services.classdiscovery.ClassDiscoveryService2: class-level details
+09:21:19,434  [FacetedMethodsBuilder main       INFO ]  introspecting org.apache.isis.applib.services.classdiscovery.ClassDiscoveryService: class-level details
+2013  [FacetedMethodsBuilder     main       INFO ]  introspecting org.apache.isis.applib.services.classdiscovery.ClassDiscoveryService: class-level details
+09:21:19,436  [FacetedMethodsBuilder main       INFO ]  introspecting org.apache.isis.applib.services.clock.ClockService: class-level details
+2015  [FacetedMethodsBuilder     main       INFO ]  introspecting org.apache.isis.applib.services.clock.ClockService: class-level details
+09:21:19,438  [FacetedMethodsBuilder main       INFO ]  introspecting org.apache.isis.applib.services.command.CommandContext: class-level details
+2017  [FacetedMethodsBuilder     main       INFO ]  introspecting org.apache.isis.applib.services.command.CommandContext: class-level details
+09:21:19,441  [FacetedMethodsBuilder main       INFO ]  introspecting org.apache.isis.applib.services.iactn.InteractionContext: class-level details
+2020  [FacetedMethodsBuilder     main       INFO ]  introspecting org.apache.isis.applib.services.iactn.InteractionContext: class-level details
+09:21:19,443  [FacetedMethodsBuilder main       INFO ]  introspecting org.apache.isis.applib.services.publish.PublisherServiceLogging: class-level details
+2022  [FacetedMethodsBuilder     main       INFO ]  introspecting org.apache.isis.applib.services.publish.PublisherServiceLogging: class-level details
+09:21:19,445  [FacetedMethodsBuilder main       INFO ]  introspecting org.apache.isis.applib.services.publish.PublisherService: class-level details
+2024  [FacetedMethodsBuilder     main       INFO ]  introspecting org.apache.isis.applib.services.publish.PublisherService: class-level details
+09:21:19,446  [FacetedMethodsBuilder main       INFO ]  introspecting org.apache.isis.applib.services.queryresultscache.QueryResultsCache: class-level details
+2025  [FacetedMethodsBuilder     main       INFO ]  introspecting org.apache.isis.applib.services.queryresultscache.QueryResultsCache: class-level details
+09:21:19,449  [FacetedMethodsBuilder main       INFO ]  introspecting org.apache.isis.applib.services.WithTransactionScope: class-level details
+2028  [FacetedMethodsBuilder     main       INFO ]  introspecting org.apache.isis.applib.services.WithTransactionScope: class-level details
+09:21:19,450  [FacetedMethodsBuilder main       INFO ]  introspecting org.apache.isis.applib.services.routing.RoutingServiceDefault: class-level details
+2029  [FacetedMethodsBuilder     main       INFO ]  introspecting org.apache.isis.applib.services.routing.RoutingServiceDefault: class-level details
+09:21:19,452  [FacetedMethodsBuilder main       INFO ]  introspecting org.apache.isis.applib.services.routing.RoutingService: class-level details
+2031  [FacetedMethodsBuilder     main       INFO ]  introspecting org.apache.isis.applib.services.routing.RoutingService: class-level details
+09:21:19,453  [FacetedMethodsBuilder main       INFO ]  introspecting org.apache.isis.applib.services.scratchpad.Scratchpad: class-level details
+2032  [FacetedMethodsBuilder     main       INFO ]  introspecting org.apache.isis.applib.services.scratchpad.Scratchpad: class-level details
+09:21:19,455  [FacetedMethodsBuilder main       INFO ]  introspecting org.apache.isis.applib.services.tablecol.TableColumnOrderService$Default: class-level details
+2034  [FacetedMethodsBuilder     main       INFO ]  introspecting org.apache.isis.applib.services.tablecol.TableColumnOrderService$Default: class-level details
+09:21:19,457  [FacetedMethodsBuilder main       INFO ]  introspecting org.apache.isis.applib.services.tablecol.TableColumnOrderService: class-level details
+2036  [FacetedMethodsBuilder     main       INFO ]  introspecting org.apache.isis.applib.services.tablecol.TableColumnOrderService: class-level details
+09:21:19,458  [FacetedMethodsBuilder main       INFO ]  introspecting org.apache.isis.applib.services.urlencoding.UrlEncodingServiceUsingBaseEncoding: class-level details
+2037  [FacetedMethodsBuilder     main       INFO ]  introspecting org.apache.isis.applib.services.urlencoding.UrlEncodingServiceUsingBaseEncoding: class-level details
+09:21:19,459  [FacetedMethodsBuilder main       INFO ]  introspecting org.apache.isis.applib.services.urlencoding.UrlEncodingService: class-level details
+2038  [FacetedMethodsBuilder     main       INFO ]  introspecting org.apache.isis.applib.services.urlencoding.UrlEncodingService: class-level details
+09:21:19,461  [FacetedMethodsBuilder main       INFO ]  introspecting org.apache.isis.core.metamodel.services.appfeat.ApplicationFeatureFactory: class-level details
+2040  [FacetedMethodsBuilder     main       INFO ]  introspecting org.apache.isis.core.metamodel.services.appfeat.ApplicationFeatureFactory: class-level details
+09:21:19,462  [FacetedMethodsBuilder main       INFO ]  introspecting org.apache.isis.core.metamodel.services.appfeat.ApplicationFeature: class-level details
+2041  [FacetedMethodsBuilder     main       INFO ]  introspecting org.apache.isis.core.metamodel.services.appfeat.ApplicationFeature: class-level details
+09:21:19,466  [FacetedMethodsBuilder main       INFO ]  introspecting org.apache.isis.applib.services.appfeat.ApplicationMemberType: class-level details
+2045  [FacetedMethodsBuilder     main       INFO ]  introspecting org.apache.isis.applib.services.appfeat.ApplicationMemberType: class-level details
+09:21:19,468  [FacetedMethodsBuilder main       INFO ]  introspecting java.lang.Boolean: class-level details
+2047  [FacetedMethodsBuilder     main       INFO ]  introspecting java.lang.Boolean: class-level details
+09:21:19,472  [FacetedMethodsBuilder main       INFO ]  introspecting java.lang.Integer: class-level details
+2051  [FacetedMethodsBuilder     main       INFO ]  introspecting java.lang.Integer: class-level details
+09:21:19,496  [FacetedMethodsBuilder main       INFO ]  introspecting org.apache.isis.applib.annotation.SemanticsOf: class-level details
+2075  [FacetedMethodsBuilder     main       INFO ]  introspecting org.apache.isis.applib.annotation.SemanticsOf: class-level details
+09:21:19,501  [FacetedMethodsBuilder main       INFO ]  introspecting org.apache.isis.core.metamodel.services.appfeat.ApplicationFeatureId: class-level details
+2080  [FacetedMethodsBuilder     main       INFO ]  introspecting org.apache.isis.core.metamodel.services.appfeat.ApplicationFeatureId: class-level details
+09:21:19,511  [FacetedMethodsBuilder main       INFO ]  introspecting org.apache.isis.core.metamodel.services.appfeat.ApplicationFeatureRepositoryDefault: class-level details
+2090  [FacetedMethodsBuilder     main       INFO ]  introspecting org.apache.isis.core.metamodel.services.appfeat.ApplicationFeatureRepositoryDefault: class-level details
+09:21:19,513  [FacetedMethodsBuilder main       INFO ]  introspecting org.apache.isis.applib.services.appfeat.ApplicationFeatureRepository: class-level details
+2092  [FacetedMethodsBuilder     main       INFO ]  introspecting org.apache.isis.applib.services.appfeat.ApplicationFeatureRepository: class-level details
+09:21:19,515  [FacetedMethodsBuilder main       INFO ]  introspecting org.apache.isis.core.metamodel.services.bookmarks.BookmarkServiceInternalDefault: class-level details
+2094  [FacetedMethodsBuilder     main       INFO ]  introspecting org.apache.isis.core.metamodel.services.bookmarks.BookmarkServiceInternalDefault: class-level details
+09:21:19,517  [FacetedMethodsBuilder main       INFO ]  introspecting org.apache.isis.applib.services.bookmark.BookmarkService2: class-level details
+2096  [FacetedMethodsBuilder     main       INFO ]  introspecting org.apache.isis.applib.services.bookmark.BookmarkService2: class-level details
+09:21:19,519  [FacetedMethodsBuilder main       INFO ]  introspecting org.apache.isis.applib.services.bookmark.BookmarkService: class-level details
+2098  [FacetedMethodsBuilder     main       INFO ]  introspecting org.apache.isis.applib.services.bookmark.BookmarkService: class-level details
+09:21:19,520  [FacetedMethodsBuilder main       INFO ]  introspecting org.apache.isis.core.metamodel.services.config.ConfigurationServiceDefault: class-level details
+2099  [FacetedMethodsBuilder     main       INFO ]  introspecting org.apache.isis.core.metamodel.services.config.ConfigurationServiceDefault: class-level details
+09:21:19,522  [FacetedMethodsBuilder main       INFO ]  introspecting org.apache.isis.applib.services.config.ConfigurationService: class-level details
+2101  [FacetedMethodsBuilder     main       INFO ]  introspecting org.apache.isis.applib.services.config.ConfigurationService: class-level details
+09:21:19,523  [FacetedMethodsBuilder main       INFO ]  introspecting org.apache.isis.core.metamodel.services.container.DomainObjectContainerDefault: class-level details
+2102  [FacetedMethodsBuilder     main       INFO ]  introspecting org.apache.isis.core.metamodel.services.container.DomainObjectContainerDefault: class-level details
+09:21:19,535  [FacetedMethodsBuilder main       INFO ]  introspecting org.apache.isis.applib.services.exceprecog.ExceptionRecognizer: class-level details
+2114  [FacetedMethodsBuilder     main       INFO ]  introspecting org.apache.isis.applib.services.exceprecog.ExceptionRecognizer: class-level details
+09:21:19,535  [FacetedMethodsBuilder main       INFO ]  introspecting org.apache.isis.core.metamodel.services.factory.FactoryServiceInternalDefault: class-level details
+2114  [FacetedMethodsBuilder     main       INFO ]  introspecting org.apache.isis.core.metamodel.services.factory.FactoryServiceInternalDefault: class-level details
+09:21:19,537  [FacetedMethodsBuilder main       INFO ]  introspecting org.apache.isis.applib.services.factory.FactoryService: class-level details
+2116  [FacetedMethodsBuilder     main       INFO ]  introspecting org.apache.isis.applib.services.factory.FactoryService: class-level details
+09:21:19,538  [FacetedMethodsBuilder main       INFO ]  introspecting org.apache.isis.core.metamodel.services.grid.GridLoaderServiceDefault: class-level details
+2117  [FacetedMethodsBuilder     main       INFO ]  introspecting org.apache.isis.core.metamodel.services.grid.GridLoaderServiceDefault: class-level details
+09:21:19,540  [FacetedMethodsBuilder main       INFO ]  introspecting org.apache.isis.applib.services.grid.GridLoaderService: class-level details
+2119  [FacetedMethodsBuilder     main       INFO ]  introspecting org.apache.isis.applib.services.grid.GridLoaderService: class-level details
+09:21:19,541  [FacetedMethodsBuilder main       INFO ]  introspecting org.apache.isis.core.metamodel.services.grid.GridServiceDefault: class-level details
+2120  [FacetedMethodsBuilder     main       INFO ]  introspecting org.apache.isis.core.metamodel.services.grid.GridServiceDefault: class-level details
+09:21:19,544  [FacetedMethodsBuilder main       INFO ]  introspecting org.apache.isis.applib.services.grid.GridService: class-level details
+2123  [FacetedMethodsBuilder     main       INFO ]  introspecting org.apache.isis.applib.services.grid.GridService: class-level details
+09:21:19,546  [FacetedMethodsBuilder main       INFO ]  introspecting org.apache.isis.core.metamodel.services.grid.bootstrap3.GridSystemServiceBS3: class-level details
+2125  [FacetedMethodsBuilder     main       INFO ]  introspecting org.apache.isis.core.metamodel.services.grid.bootstrap3.GridSystemServiceBS3: class-level details
+09:21:19,554  [FacetedMethodsBuilder main       INFO ]  introspecting org.apache.isis.core.metamodel.services.grid.GridSystemServiceAbstract: class-level details
+2133  [FacetedMethodsBuilder     main       INFO ]  introspecting org.apache.isis.core.metamodel.services.grid.GridSystemServiceAbstract: class-level details
+09:21:19,556  [FacetedMethodsBuilder main       INFO ]  introspecting org.apache.isis.applib.services.grid.GridSystemService: class-level details
+2135  [FacetedMethodsBuilder     main       INFO ]  introspecting org.apache.isis.applib.services.grid.GridSystemService: class-level details
+09:21:19,558  [FacetedMethodsBuilder main       INFO ]  introspecting org.apache.isis.core.metamodel.services.layout.LayoutServiceDefault: class-level details
+2137  [FacetedMethodsBuilder     main       INFO ]  introspecting org.apache.isis.core.metamodel.services.layout.LayoutServiceDefault: class-level details
+09:21:19,559  [FacetedMethodsBuilder main       INFO ]  introspecting org.apache.isis.applib.services.layout.LayoutService: class-level details
+2138  [FacetedMethodsBuilder     main       INFO ]  introspecting org.apache.isis.applib.services.layout.LayoutService: class-level details
+09:21:19,560  [FacetedMethodsBuilder main       INFO ]  introspecting org.apache.isis.core.metamodel.services.message.MessageServiceNoop: class-level details
+2139  [FacetedMethodsBuilder     main       INFO ]  introspecting org.apache.isis.core.metamodel.services.message.MessageServiceNoop: class-level details
+09:21:19,562  [FacetedMethodsBuilder main       INFO ]  introspecting org.apache.isis.core.metamodel.services.metamodel.MetaModelServiceDefault: class-level details
+2141  [FacetedMethodsBuilder     main       INFO ]  introspecting org.apache.isis.core.metamodel.services.metamodel.MetaModelServiceDefault: class-level details
+09:21:19,565  [FacetedMethodsBuilder main       INFO ]  introspecting org.apache.isis.applib.services.metamodel.MetaModelService3: class-level details
+2144  [FacetedMethodsBuilder     main       INFO ]  introspecting org.apache.isis.applib.services.metamodel.MetaModelService3: class-level details
+09:21:19,566  [FacetedMethodsBuilder main       INFO ]  introspecting org.apache.isis.applib.services.metamodel.MetaModelService2: class-level details
+2145  [FacetedMethodsBuilder     main       INFO ]  introspecting org.apache.isis.applib.services.metamodel.MetaModelService2: class-level details
+09:21:19,567  [FacetedMethodsBuilder main       INFO ]  introspecting org.apache.isis.applib.services.metamodel.MetaModelService: class-level details
+2146  [FacetedMethodsBuilder     main       INFO ]  introspecting org.apache.isis.applib.services.metamodel.MetaModelService: class-level details
+09:21:19,568  [FacetedMethodsBuilder main       INFO ]  introspecting org.apache.isis.core.metamodel.services.persistsession.PersistenceSessionServiceInternalNoop: class-level details
+2147  [FacetedMethodsBuilder     main       INFO ]  introspecting org.apache.isis.core.metamodel.services.persistsession.PersistenceSessionServiceInternalNoop: class-level details
+09:21:19,573  [FacetedMethodsBuilder main       INFO ]  introspecting org.apache.isis.core.metamodel.services.registry.ServiceRegistryDefault: class-level details
+2152  [FacetedMethodsBuilder     main       INFO ]  introspecting org.apache.isis.core.metamodel.services.registry.ServiceRegistryDefault: class-level details
+09:21:19,575  [FacetedMethodsBuilder main       INFO ]  introspecting org.apache.isis.applib.services.registry.ServiceRegistry2: class-level details
+2154  [FacetedMethodsBuilder     main       INFO ]  introspecting org.apache.isis.applib.services.registry.ServiceRegistry2: class-level details
+09:21:19,577  [FacetedMethodsBuilder main       INFO ]  introspecting org.apache.isis.applib.services.registry.ServiceRegistry: class-level details
+2156  [FacetedMethodsBuilder     main       INFO ]  introspecting org.apache.isis.applib.services.registry.ServiceRegistry: class-level details
+09:21:19,580  [FacetedMethodsBuilder main       INFO ]  introspecting org.apache.isis.core.metamodel.services.ServicesInjectorAware: class-level details
+2159  [FacetedMethodsBuilder     main       INFO ]  introspecting org.apache.isis.core.metamodel.services.ServicesInjectorAware: class-level details
+09:21:19,582  [FacetedMethodsBuilder main       INFO ]  introspecting org.apache.isis.core.metamodel.services.repository.RepositoryServiceInternalDefault: class-level details
+2161  [FacetedMethodsBuilder     main       INFO ]  introspecting org.apache.isis.core.metamodel.services.repository.RepositoryServiceInternalDefault: class-level details
+09:21:19,584  [FacetedMethodsBuilder main       INFO ]  introspecting org.apache.isis.applib.services.repository.RepositoryService: class-level details
+2163  [FacetedMethodsBuilder     main       INFO ]  introspecting org.apache.isis.applib.services.repository.RepositoryService: class-level details
+09:21:19,586  [FacetedMethodsBuilder main       INFO ]  introspecting org.apache.isis.core.metamodel.services.swagger.SwaggerServiceDefault: class-level details
+2165  [FacetedMethodsBuilder     main       INFO ]  introspecting org.apache.isis.core.metamodel.services.swagger.SwaggerServiceDefault: class-level details
+09:21:19,588  [FacetedMethodsBuilder main       INFO ]  introspecting org.apache.isis.applib.services.swagger.SwaggerService: class-level details
+2167  [FacetedMethodsBuilder     main       INFO ]  introspecting org.apache.isis.applib.services.swagger.SwaggerService: class-level details
+09:21:19,589  [FacetedMethodsBuilder main       INFO ]  introspecting org.apache.isis.core.metamodel.services.title.TitleServiceDefault: class-level details
+2168  [FacetedMethodsBuilder     main       INFO ]  introspecting org.apache.isis.core.metamodel.services.title.TitleServiceDefault: class-level details
+09:21:19,591  [FacetedMethodsBuilder main       INFO ]  introspecting org.apache.isis.applib.services.title.TitleService: class-level details
+2170  [FacetedMethodsBuilder     main       INFO ]  introspecting org.apache.isis.applib.services.title.TitleService: class-level details
+09:21:19,592  [FacetedMethodsBuilder main       INFO ]  introspecting org.apache.isis.core.metamodel.services.user.UserServiceDefault: class-level details
+2171  [FacetedMethodsBuilder     main       INFO ]  introspecting org.apache.isis.core.metamodel.services.user.UserServiceDefault: class-level details
+09:21:19,593  [FacetedMethodsBuilder main       INFO ]  introspecting org.apache.isis.applib.services.user.UserService: class-level details
+2172  [FacetedMethodsBuilder     main       INFO ]  introspecting org.apache.isis.applib.services.user.UserService: class-level details
+09:21:19,594  [FacetedMethodsBuilder main       INFO ]  introspecting org.apache.isis.core.metamodel.services.user.UserServiceDefault$SudoServiceSpi: class-level details
+2173  [FacetedMethodsBuilder     main       INFO ]  introspecting org.apache.isis.core.metamodel.services.user.UserServiceDefault$SudoServiceSpi: class-level details
+09:21:19,595  [FacetedMethodsBuilder main       INFO ]  introspecting org.apache.isis.applib.services.sudo.SudoService$Spi: class-level details
+2174  [FacetedMethodsBuilder     main       INFO ]  introspecting org.apache.isis.applib.services.sudo.SudoService$Spi: class-level details
+09:21:19,597  [FacetedMethodsBuilder main       INFO ]  introspecting org.apache.isis.core.metamodel.services.xactn.TransactionServiceDefault: class-level details
+2176  [FacetedMethodsBuilder     main       INFO ]  introspecting org.apache.isis.core.metamodel.services.xactn.TransactionServiceDefault: class-level details
+09:21:19,599  [FacetedMethodsBuilder main       INFO ]  introspecting org.apache.isis.applib.services.xactn.TransactionService2: class-level details
+2178  [FacetedMethodsBuilder     main       INFO ]  introspecting org.apache.isis.applib.services.xactn.TransactionService2: class-level details
+09:21:19,600  [FacetedMethodsBuilder main       INFO ]  introspecting org.apache.isis.applib.services.xactn.TransactionService: class-level details
+2179  [FacetedMethodsBuilder     main       INFO ]  introspecting org.apache.isis.applib.services.xactn.TransactionService: class-level details
+09:21:19,601  [FacetedMethodsBuilder main       INFO ]  introspecting org.apache.isis.core.runtime.services.auditing.AuditingServiceInternal: class-level details
+2180  [FacetedMethodsBuilder     main       INFO ]  introspecting org.apache.isis.core.runtime.services.auditing.AuditingServiceInternal: class-level details
+09:21:19,602  [FacetedMethodsBuilder main       INFO ]  introspecting org.apache.isis.core.runtime.services.authsess.AuthenticationSessionProviderDefault: class-level details
+2181  [FacetedMethodsBuilder     main       INFO ]  introspecting org.apache.isis.core.runtime.services.authsess.AuthenticationSessionProviderDefault: class-level details
+09:21:19,604  [FacetedMethodsBuilder main       INFO ]  introspecting org.apache.isis.core.commons.authentication.AuthenticationSessionProvider: class-level details
+2183  [FacetedMethodsBuilder     main       INFO ]  introspecting org.apache.isis.core.commons.authentication.AuthenticationSessionProvider: class-level details
+09:21:19,605  [FacetedMethodsBuilder main       INFO ]  introspecting org.apache.isis.core.runtime.services.background.BackgroundServiceDefault: class-level details
+2184  [FacetedMethodsBuilder     main       INFO ]  introspecting org.apache.isis.core.runtime.services.background.BackgroundServiceDefault: class-level details
+09:21:19,607  [FacetedMethodsBuilder main       INFO ]  introspecting org.apache.isis.applib.services.background.BackgroundService2: class-level details
+2186  [FacetedMethodsBuilder     main       INFO ]  introspecting org.apache.isis.applib.services.background.BackgroundService2: class-level details
+09:21:19,608  [FacetedMethodsBuilder main       INFO ]  introspecting org.apache.isis.applib.services.background.BackgroundService: class-level details
+2187  [FacetedMethodsBuilder     main       INFO ]  introspecting org.apache.isis.applib.services.background.BackgroundService: class-level details
+09:21:19,609  [FacetedMethodsBuilder main       INFO ]  introspecting org.apache.isis.core.runtime.services.changes.ChangedObjectsServiceInternal: class-level details
+2188  [FacetedMethodsBuilder     main       INFO ]  introspecting org.apache.isis.core.runtime.services.changes.ChangedObjectsServiceInternal: class-level details
+09:21:19,611  [FacetedMethodsBuilder main       INFO ]  introspecting org.apache.isis.core.runtime.services.command.CommandDtoServiceInternalDefault: class-level details
+2190  [FacetedMethodsBuilder     main       INFO ]  introspecting org.apache.isis.core.runtime.services.command.CommandDtoServiceInternalDefault: class-level details
+09:21:19,613  [FacetedMethodsBuilder main       INFO ]  introspecting org.apache.isis.core.metamodel.services.command.CommandDtoServiceInternal: class-level details
+2192  [FacetedMethodsBuilder     main       INFO ]  introspecting org.apache.isis.core.metamodel.services.command.CommandDtoServiceInternal: class-level details
+09:21:19,614  [FacetedMethodsBuilder main       INFO ]  introspecting org.apache.isis.core.runtime.services.command.CommandServiceDefault: class-level details
+2193  [FacetedMethodsBuilder     main       INFO ]  introspecting org.apache.isis.core.runtime.services.command.CommandServiceDefault: class-level details
+09:21:19,616  [FacetedMethodsBuilder main       INFO ]  introspecting org.apache.isis.applib.services.command.spi.CommandService: class-level details
+2195  [FacetedMethodsBuilder     main       INFO ]  introspecting org.apache.isis.applib.services.command.spi.CommandService: class-level details
+09:21:19,617  [FacetedMethodsBuilder main       INFO ]  introspecting org.apache.isis.core.runtime.services.email.EmailServiceDefault: class-level details
+2196  [FacetedMethodsBuilder     main       INFO ]  introspecting org.apache.isis.core.runtime.services.email.EmailServiceDefault: class-level details
+09:21:19,618  [FacetedMethodsBuilder main       INFO ]  introspecting org.apache.isis.applib.services.email.EmailService: class-level details
+2197  [FacetedMethodsBuilder     main       INFO ]  introspecting org.apache.isis.applib.services.email.EmailService: class-level details
+09:21:19,619  [FacetedMethodsBuilder main       INFO ]  introspecting java.io.Serializable: class-level details
+2198  [FacetedMethodsBuilder     main       INFO ]  introspecting java.io.Serializable: class-level details
+09:21:19,620  [FacetedMethodsBuilder main       INFO ]  introspecting org.apache.isis.core.runtime.services.homepage.HomePageProviderServiceDefault: class-level details
+2199  [FacetedMethodsBuilder     main       INFO ]  introspecting org.apache.isis.core.runtime.services.homepage.HomePageProviderServiceDefault: class-level details
+09:21:19,621  [FacetedMethodsBuilder main       INFO ]  introspecting org.apache.isis.applib.services.homepage.HomePageProviderService: class-level details
+2200  [FacetedMethodsBuilder     main       INFO ]  introspecting org.apache.isis.applib.services.homepage.HomePageProviderService: class-level details
+09:21:19,622  [FacetedMethodsBuilder main       INFO ]  introspecting org.apache.isis.core.runtime.services.i18n.po.TranslationServicePo: class-level details
+2201  [FacetedMethodsBuilder     main       INFO ]  introspecting org.apache.isis.core.runtime.services.i18n.po.TranslationServicePo: class-level details
+09:21:19,624  [FacetedMethodsBuilder main       INFO ]  introspecting org.apache.isis.applib.services.i18n.TranslationService: class-level details
+2203  [FacetedMethodsBuilder     main       INFO ]  introspecting org.apache.isis.applib.services.i18n.TranslationService: class-level details
+09:21:19,625  [FacetedMethodsBuilder main       INFO ]  introspecting org.apache.isis.core.runtime.services.ixn.InteractionDtoServiceInternalDefault: class-level details
+2204  [FacetedMethodsBuilder     main       INFO ]  introspecting org.apache.isis.core.runtime.services.ixn.InteractionDtoServiceInternalDefault: class-level details
+09:21:19,627  [FacetedMethodsBuilder main       INFO ]  introspecting org.apache.isis.core.metamodel.services.ixn.InteractionDtoServiceInternal: class-level details
+2206  [FacetedMethodsBuilder     main       INFO ]  introspecting org.apache.isis.core.metamodel.services.ixn.InteractionDtoServiceInternal: class-level details
+09:21:19,628  [FacetedMethodsBuilder main       INFO ]  introspecting org.apache.isis.core.runtime.services.memento.MementoServiceDefault: class-level details
+2207  [FacetedMethodsBuilder     main       INFO ]  introspecting org.apache.isis.core.runtime.services.memento.MementoServiceDefault: class-level details
+09:21:19,629  [FacetedMethodsBuilder main       INFO ]  introspecting org.apache.isis.applib.services.memento.MementoService: class-level details
+2208  [FacetedMethodsBuilder     main       INFO ]  introspecting org.apache.isis.applib.services.memento.MementoService: class-level details
+09:21:19,631  [FacetedMethodsBuilder main       INFO ]  introspecting org.apache.isis.core.runtime.services.metrics.MetricsServiceDefault: class-level details
+2210  [FacetedMethodsBuilder     main       INFO ]  introspecting org.apache.isis.core.runtime.services.metrics.MetricsServiceDefault: class-level details
+09:21:19,634  [FacetedMethodsBuilder main       INFO ]  introspecting org.apache.isis.applib.services.metrics.MetricsService: class-level details
+2213  [FacetedMethodsBuilder     main       INFO ]  introspecting org.apache.isis.applib.services.metrics.MetricsService: class-level details
+09:21:19,636  [FacetedMethodsBuilder main       INFO ]  introspecting javax.jdo.listener.InstanceLifecycleListener: class-level details
+2215  [FacetedMethodsBuilder     main       INFO ]  introspecting javax.jdo.listener.InstanceLifecycleListener: class-level details
+09:21:19,640  [FacetedMethodsBuilder main       INFO ]  introspecting javax.jdo.listener.LoadLifecycleListener: class-level details
+2219  [FacetedMethodsBuilder     main       INFO ]  introspecting javax.jdo.listener.LoadLifecycleListener: class-level details
+09:21:19,642  [FacetedMethodsBuilder main       INFO ]  introspecting org.apache.isis.core.runtime.services.publish.PublishingServiceInternalDefault: class-level details
+2221  [FacetedMethodsBuilder     main       INFO ]  introspecting org.apache.isis.core.runtime.services.publish.PublishingServiceInternalDefault: class-level details
+09:21:19,644  [FacetedMethodsBuilder main       INFO ]  introspecting org.apache.isis.core.metamodel.services.publishing.PublishingServiceInternal: class-level details
+2223  [FacetedMethodsBuilder     main       INFO ]  introspecting org.apache.isis.core.metamodel.services.publishing.PublishingServiceInternal: class-level details
+09:21:19,645  [FacetedMethodsBuilder main       INFO ]  introspecting org.apache.isis.core.runtime.services.sessmgmt.SessionManagementServiceDefault: class-level details
+2224  [FacetedMethodsBuilder     main       INFO ]  introspecting org.apache.isis.core.runtime.services.sessmgmt.SessionManagementServiceDefault: class-level details
+09:21:19,646  [FacetedMethodsBuilder main       INFO ]  introspecting org.apache.isis.applib.services.sessmgmt.SessionManagementService: class-level details
+2225  [FacetedMethodsBuilder     main       INFO ]  introspecting org.apache.isis.applib.services.sessmgmt.SessionManagementService: class-level details
+09:21:19,648  [FacetedMethodsBuilder main       INFO ]  introspecting org.apache.isis.core.runtime.services.sudo.SudoServiceDefault: class-level details
+2227  [FacetedMethodsBuilder     main       INFO ]  introspecting org.apache.isis.core.runtime.services.sudo.SudoServiceDefault: class-level details
+09:21:19,649  [FacetedMethodsBuilder main       INFO ]  introspecting org.apache.isis.applib.services.sudo.SudoService: class-level details
+2228  [FacetedMethodsBuilder     main       INFO ]  introspecting org.apache.isis.applib.services.sudo.SudoService: class-level details
+09:21:19,650  [FacetedMethodsBuilder main       INFO ]  introspecting org.apache.isis.core.runtime.services.userreg.EmailNotificationServiceDefault: class-level details
+2229  [FacetedMethodsBuilder     main       INFO ]  introspecting org.apache.isis.core.runtime.services.userreg.EmailNotificationServiceDefault: class-level details
+09:21:19,652  [FacetedMethodsBuilder main       INFO ]  introspecting org.apache.isis.applib.services.userreg.EmailNotificationService: class-level details
+2231  [FacetedMethodsBuilder     main       INFO ]  introspecting org.apache.isis.applib.services.userreg.EmailNotificationService: class-level details
+09:21:19,653  [FacetedMethodsBuilder main       INFO ]  introspecting org.apache.isis.core.runtime.services.xmlsnapshot.XmlSnapshotServiceDefault: class-level details
+2232  [FacetedMethodsBuilder     main       INFO ]  introspecting org.apache.isis.core.runtime.services.xmlsnapshot.XmlSnapshotServiceDefault: class-level details
+09:21:19,655  [FacetedMethodsBuilder main       INFO ]  introspecting org.apache.isis.applib.services.xmlsnapshot.XmlSnapshotServiceAbstract: class-level details
+2234  [FacetedMethodsBuilder     main       INFO ]  introspecting org.apache.isis.applib.services.xmlsnapshot.XmlSnapshotServiceAbstract: class-level details
+09:21:19,656  [FacetedMethodsBuilder main       INFO ]  introspecting org.apache.isis.applib.services.xmlsnapshot.XmlSnapshotService: class-level details
+2235  [FacetedMethodsBuilder     main       INFO ]  introspecting org.apache.isis.applib.services.xmlsnapshot.XmlSnapshotService: class-level details
+09:21:19,658  [FacetedMethodsBuilder main       INFO ]  introspecting org.apache.isis.core.wrapper.WrapperFactoryDefault: class-level details
+2237  [FacetedMethodsBuilder     main       INFO ]  introspecting org.apache.isis.core.wrapper.WrapperFactoryDefault: class-level details
+09:21:19,659  [FacetedMethodsBuilder main       INFO ]  introspecting org.apache.isis.applib.services.wrapper.WrapperFactory: class-level details
+2238  [FacetedMethodsBuilder     main       INFO ]  introspecting org.apache.isis.applib.services.wrapper.WrapperFactory: class-level details
+09:21:19,661  [FacetedMethodsBuilder main       INFO ]  introspecting org.apache.isis.objectstore.jdo.applib.service.exceprecog.ExceptionRecognizerCompositeForJdoObjectStore: class-level details
+2240  [FacetedMethodsBuilder     main       INFO ]  introspecting org.apache.isis.objectstore.jdo.applib.service.exceprecog.ExceptionRecognizerCompositeForJdoObjectStore: class-level details
+09:21:19,662  [FacetedMethodsBuilder main       INFO ]  introspecting org.apache.isis.applib.services.exceprecog.ExceptionRecognizerComposite: class-level details
+2241  [FacetedMethodsBuilder     main       INFO ]  introspecting org.apache.isis.applib.services.exceprecog.ExceptionRecognizerComposite: class-level details
+09:21:19,664  [FacetedMethodsBuilder main       INFO ]  introspecting org.apache.isis.applib.services.exceprecog.ExceptionRecognizer2: class-level details
+2243  [FacetedMethodsBuilder     main       INFO ]  introspecting org.apache.isis.applib.services.exceprecog.ExceptionRecognizer2: class-level details
+09:21:19,665  [FacetedMethodsBuilder main       INFO ]  introspecting org.apache.isis.objectstore.jdo.datanucleus.service.support.IsisJdoSupportImpl: class-level details
+2244  [FacetedMethodsBuilder     main       INFO ]  introspecting org.apache.isis.objectstore.jdo.datanucleus.service.support.IsisJdoSupportImpl: class-level details
+09:21:19,667  [FacetedMethodsBuilder main       INFO ]  introspecting org.apache.isis.objectstore.jdo.applib.service.support.IsisJdoSupport: class-level details
+2246  [FacetedMethodsBuilder     main       INFO ]  introspecting org.apache.isis.objectstore.jdo.applib.service.support.IsisJdoSupport: class-level details
+09:21:19,668  [FacetedMethodsBuilder main       INFO ]  introspecting org.apache.isis.applib.services.jdosupport.IsisJdoSupport: class-level details
+2247  [FacetedMethodsBuilder     main       INFO ]  introspecting org.apache.isis.applib.services.jdosupport.IsisJdoSupport: class-level details
+09:21:19,669  [FacetedMethodsBuilder main       INFO ]  introspecting org.apache.isis.objectstore.jdo.datanucleus.service.support.TimestampService: class-level details
+2248  [FacetedMethodsBuilder     main       INFO ]  introspecting org.apache.isis.objectstore.jdo.datanucleus.service.support.TimestampService: class-level details
+09:21:19,671  [FacetedMethodsBuilder main       INFO ]  introspecting javax.jdo.listener.StoreLifecycleListener: class-level details
+2250  [FacetedMethodsBuilder     main       INFO ]  introspecting javax.jdo.listener.StoreLifecycleListener: class-level details
+09:21:19,672  [FacetedMethodsBuilder main       INFO ]  introspecting org.apache.isis.schema.services.jaxb.JaxbServiceDefault: class-level details
+2251  [FacetedMethodsBuilder     main       INFO ]  introspecting org.apache.isis.schema.services.jaxb.JaxbServiceDefault: class-level details
+09:21:19,674  [FacetedMethodsBuilder main       INFO ]  introspecting org.apache.isis.applib.services.jaxb.JaxbService$Simple: class-level details
+2253  [FacetedMethodsBuilder     main       INFO ]  introspecting org.apache.isis.applib.services.jaxb.JaxbService$Simple: class-level details
+09:21:19,676  [FacetedMethodsBuilder main       INFO ]  introspecting org.apache.isis.applib.services.jaxb.JaxbService: class-level details
+2255  [FacetedMethodsBuilder     main       INFO ]  introspecting org.apache.isis.applib.services.jaxb.JaxbService: class-level details
+09:21:19,678  [FacetedMethodsBuilder main       INFO ]  introspecting org.apache.isis.core.metamodel.services.jdosupport.Persistable_datanucleusVersionTimestamp: class-level details
+2257  [FacetedMethodsBuilder     main       INFO ]  introspecting org.apache.isis.core.metamodel.services.jdosupport.Persistable_datanucleusVersionTimestamp: class-level details
+09:21:19,683  [FacetedMethodsBuilder main       INFO ]  introspecting java.sql.Timestamp: class-level details
+2262  [FacetedMethodsBuilder     main       INFO ]  introspecting java.sql.Timestamp: class-level details
+09:21:19,696  [FacetedMethodsBuilder main       INFO ]  introspecting org.apache.isis.applib.services.dto.Dto_downloadXsd: class-level details
+2275  [FacetedMethodsBuilder     main       INFO ]  introspecting org.apache.isis.applib.services.dto.Dto_downloadXsd: class-level details
+09:21:19,698  [FacetedMethodsBuilder main       INFO ]  introspecting org.apache.isis.applib.services.jaxb.JaxbService$IsisSchemas: class-level details
+2277  [FacetedMethodsBuilder     main       INFO ]  introspecting org.apache.isis.applib.services.jaxb.JaxbService$IsisSchemas: class-level details
+09:21:19,701  [FacetedMethodsBuilder main       INFO ]  introspecting org.apache.isis.applib.services.layout.Object_downloadLayoutXml: class-level details
+2280  [FacetedMethodsBuilder     main       INFO ]  introspecting org.apache.isis.applib.services.layout.Object_downloadLayoutXml: class-level details
+09:21:19,707  [FacetedMethodsBuilder main       INFO ]  introspecting org.apache.isis.core.metamodel.services.jdosupport.Persistable_datanucleusVersionLong: class-level details
+2286  [FacetedMethodsBuilder     main       INFO ]  introspecting org.apache.isis.core.metamodel.services.jdosupport.Persistable_datanucleusVersionLong: class-level details
+09:21:19,711  [FacetedMethodsBuilder main       INFO ]  introspecting java.lang.Long: class-level details
+2290  [FacetedMethodsBuilder     main       INFO ]  introspecting java.lang.Long: class-level details
+09:21:19,719  [FacetedMethodsBuilder main       INFO ]  introspecting org.apache.isis.applib.services.layout.Object_rebuildMetamodel: class-level details
+2298  [FacetedMethodsBuilder     main       INFO ]  introspecting org.apache.isis.applib.services.layout.Object_rebuildMetamodel: class-level details
+09:21:19,722  [FacetedMethodsBuilder main       INFO ]  introspecting org.apache.isis.applib.services.dto.Dto_downloadXml: class-level details
+2301  [FacetedMethodsBuilder     main       INFO ]  introspecting org.apache.isis.applib.services.dto.Dto_downloadXml: class-level details
+09:21:19,726  [FacetedMethodsBuilder main       INFO ]  introspecting org.apache.isis.core.metamodel.services.jdosupport.Persistable_downloadJdoMetadata: class-level details
+2305  [FacetedMethodsBuilder     main       INFO ]  introspecting org.apache.isis.core.metamodel.services.jdosupport.Persistable_downloadJdoMetadata: class-level details
+09:21:19,730  [FacetedMethodsBuilder main       INFO ]  introspecting org.apache.isis.applib.services.bookmark.BookmarkHolder_object: class-level details
+2309  [FacetedMethodsBuilder     main       INFO ]  introspecting org.apache.isis.applib.services.bookmark.BookmarkHolder_object: class-level details
+09:21:19,734  [FacetedMethodsBuilder main       INFO ]  introspecting org.apache.isis.applib.services.bookmark.BookmarkHolder_lookup: class-level details
+2313  [FacetedMethodsBuilder     main       INFO ]  introspecting org.apache.isis.applib.services.bookmark.BookmarkHolder_lookup: class-level details
+09:21:19,737  [FacetedMethodsBuilder main       INFO ]  introspecting org.apache.isis.core.metamodel.services.jdosupport.Persistable_datanucleusIdLong: class-level details
+2316  [FacetedMethodsBuilder     main       INFO ]  introspecting org.apache.isis.core.metamodel.services.jdosupport.Persistable_datanucleusIdLong: class-level details
+09:21:19,747  [PersistenceSessionFactory main       INFO ]  did *not* find config properties to use JNDI datasource; will use JDBC
+2326  [PersistenceSessionFactory main       INFO ]  did *not* find config properties to use JNDI datasource; will use JDBC
+09:21:20,504  [Schema               main       DEBUG]  Column ""DELETEME1503735680499"."UNUSED"" added to internal representation of table.
+09:21:20,507  [Schema               main       DEBUG]  Creating table "DELETEME1503735680499"
+09:21:20,510  [Schema               main       DEBUG]  CREATE TABLE "DELETEME1503735680499"
+(
+    "UNUSED" INTEGER NOT NULL
+)
+09:21:20,511  [Schema               main       DEBUG]  Execution Time = 1 ms
+09:21:20,523  [Schema               main       DEBUG]  Dropping table "DELETEME1503735680499"
+09:21:20,523  [Schema               main       DEBUG]  DROP TABLE "DELETEME1503735680499"
+09:21:20,524  [Schema               main       DEBUG]  Execution Time = 1 ms
+09:21:20,658  [Schema               main       DEBUG]  Column ""DELETEME1503735680658"."UNUSED"" added to internal representation of table.
+09:21:20,658  [Schema               main       DEBUG]  Creating table "DELETEME1503735680658"
+09:21:20,658  [Schema               main       DEBUG]  CREATE TABLE "DELETEME1503735680658"
+(
+    "UNUSED" INTEGER NOT NULL
+)
+09:21:20,659  [Schema               main       DEBUG]  Execution Time = 1 ms
+09:21:20,661  [Schema               main       DEBUG]  Dropping table "DELETEME1503735680658"
+09:21:20,662  [Schema               main       DEBUG]  DROP TABLE "DELETEME1503735680658"
+09:21:20,662  [Schema               main       DEBUG]  Execution Time = 0 ms
+09:21:20,737  [Schema               main       DEBUG]  Column ""simple"."SimpleObject"."id"" added to internal representation of table.
+09:21:20,738  [Schema               main       DEBUG]  Field [DATASTORE_ID] -> Column(s) ["simple"."SimpleObject"."id"] using mapping of type "org.datanucleus.store.rdbms.mapping.java.DatastoreIdMapping" (org.datanucleus.store.rdbms.mapping.datastore.BigIntRDBMSMapping)
+09:21:20,741  [Schema               main       DEBUG]  Table "simple"."SimpleObject" will manage the persistence of the fields for class domainapp.modules.simple.dom.impl.SimpleObject (inheritance strategy="new-table") 
+09:21:20,741  [Schema               main       DEBUG]  Column ""simple"."SimpleObject"."name"" added to internal representation of table.
+09:21:20,743  [Schema               main       DEBUG]  Field [domainapp.modules.simple.dom.impl.SimpleObject.name] -> Column(s) ["simple"."SimpleObject"."name"] using mapping of type "org.datanucleus.store.rdbms.mapping.java.StringMapping" (org.datanucleus.store.rdbms.mapping.datastore.VarCharRDBMSMapping)
+09:21:20,744  [Schema               main       DEBUG]  Column ""simple"."SimpleObject"."notes"" added to internal representation of table.
+09:21:20,744  [Schema               main       DEBUG]  Field [domainapp.modules.simple.dom.impl.SimpleObject.notes] -> Column(s) ["simple"."SimpleObject"."notes"] using mapping of type "org.datanucleus.store.rdbms.mapping.java.StringMapping" (org.datanucleus.store.rdbms.mapping.datastore.VarCharRDBMSMapping)
+09:21:20,744  [Schema               main       DEBUG]  Column ""simple"."SimpleObject"."version"" added to internal representation of table.
+09:21:20,745  [Schema               main       DEBUG]  Field [VERSION] -> Column(s) ["simple"."SimpleObject"."version"] using mapping of type "org.datanucleus.store.rdbms.mapping.java.VersionTimestampMapping" (org.datanucleus.store.rdbms.mapping.datastore.TimestampRDBMSMapping)
+09:21:20,745  [Schema               main       DEBUG]  Table/View "simple"."SimpleObject" has been initialised
+09:21:20,746  [Schema               main       DEBUG]  Schema Transaction started with connection "org.datanucleus.store.rdbms.datasource.dbcp.PoolingDataSource$PoolGuardConnectionWrapper@27b45ea" with isolation "serializable"
+09:21:20,748  [Schema               main       DEBUG]  Check of existence of "simple"."SimpleObject" returned no table
+09:21:20,748  [Schema               main       DEBUG]  Creating table "simple"."SimpleObject"
+09:21:20,749  [Schema               main       DEBUG]  CREATE TABLE "simple"."SimpleObject"
+(
+    "id" BIGINT GENERATED BY DEFAULT AS IDENTITY,
+    "name" VARCHAR(40) NOT NULL,
+    "notes" VARCHAR(4000) NULL,
+    "version" TIMESTAMP NOT NULL,
+    CONSTRAINT "SimpleObject_PK" PRIMARY KEY ("id")
+)
+09:21:20,750  [Schema               main       DEBUG]  Execution Time = 1 ms
+09:21:20,754  [Schema               main       DEBUG]  Creating candidate key "SimpleObject_name_UNQ" in catalog "" schema ""simple""
+09:21:20,754  [Schema               main       DEBUG]  ALTER TABLE "simple"."SimpleObject" ADD CONSTRAINT "SimpleObject_name_UNQ" UNIQUE ("name")
+09:21:20,756  [Schema               main       DEBUG]  Execution Time = 2 ms
+09:21:20,756  [Schema               main       DEBUG]  Schema Transaction committing with connection "org.datanucleus.store.rdbms.datasource.dbcp.PoolingDataSource$PoolGuardConnectionWrapper@27b45ea"
+09:21:20,756  [Schema               main       DEBUG]  Schema Transaction closing with connection "org.datanucleus.store.rdbms.datasource.dbcp.PoolingDataSource$PoolGuardConnectionWrapper@27b45ea"
+09:21:20,820  [FacetedMethodsBuilder main       INFO ]  introspecting org.apache.isis.applib.services.iactn.Interaction: class-level details
+3399  [FacetedMethodsBuilder     main       INFO ]  introspecting org.apache.isis.applib.services.iactn.Interaction: class-level details
+09:21:20,857  [ServiceInitializer   main       INFO ]  calling @PostConstruct on all domain services
+3436  [ServiceInitializer        main       INFO ]  calling @PostConstruct on all domain services
+09:21:20,860  [EmailServiceDefault  main       WARN ]  NOT configured
+3439  [EmailServiceDefault       main       WARN ]  NOT configured
+simple-module-tear-down                                     : EXEC domainapp.modules.simple.fixture.teardown.SimpleModuleTearDown
+create-simple-objects                                       : EXEC domainapp.modules.simple.fixture.scenario.CreateSimpleObjects
+create-simple-objects/item-1                                : Object: Foo
+09:21:21,473  [FacetedMethodsBuilder main       INFO ]  introspecting java.util.ArrayList: class-level details
+4052  [FacetedMethodsBuilder     main       INFO ]  introspecting java.util.ArrayList: class-level details
+09:21:21,477  [FacetedMethodsBuilder main       INFO ]  introspecting java.util.AbstractList: class-level details
+4056  [FacetedMethodsBuilder     main       INFO ]  introspecting java.util.AbstractList: class-level details
+09:21:21,483  [FacetedMethodsBuilder main       INFO ]  introspecting java.util.AbstractCollection: class-level details
+4062  [FacetedMethodsBuilder     main       INFO ]  introspecting java.util.AbstractCollection: class-level details
+09:21:21,489  [FacetedMethodsBuilder main       INFO ]  introspecting java.util.RandomAccess: class-level details
+4068  [FacetedMethodsBuilder     main       INFO ]  introspecting java.util.RandomAccess: class-level details
+09:21:21,490  [FacetedMethodsBuilder main       INFO ]  introspecting java.lang.Cloneable: class-level details
+4069  [FacetedMethodsBuilder     main       INFO ]  introspecting java.lang.Cloneable: class-level details
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.384 sec - in domainapp.modules.simple.integtests.tests.SimpleObject_IntegTest$DataNucleusId
+Running domainapp.modules.simple.integtests.tests.SimpleObject_IntegTest$DataNucleusVersionTimestamp
+simple-module-tear-down                                     : EXEC domainapp.modules.simple.fixture.teardown.SimpleModuleTearDown
+create-simple-objects                                       : EXEC domainapp.modules.simple.fixture.scenario.CreateSimpleObjects
+create-simple-objects/item-1                                : Object: Foo
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.025 sec - in domainapp.modules.simple.integtests.tests.SimpleObject_IntegTest$DataNucleusVersionTimestamp
+Running domainapp.modules.simple.integtests.tests.SimpleObject_IntegTest$Name
+simple-module-tear-down                                     : EXEC domainapp.modules.simple.fixture.teardown.SimpleModuleTearDown
+create-simple-objects                                       : EXEC domainapp.modules.simple.fixture.scenario.CreateSimpleObjects
+create-simple-objects/item-1                                : Object: Foo
+simple-module-tear-down                                     : EXEC domainapp.modules.simple.fixture.teardown.SimpleModuleTearDown
+create-simple-objects                                       : EXEC domainapp.modules.simple.fixture.scenario.CreateSimpleObjects
+create-simple-objects/item-1                                : Object: Foo
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.055 sec - in domainapp.modules.simple.integtests.tests.SimpleObject_IntegTest$Name
+Running domainapp.modules.simple.integtests.tests.SimpleObject_IntegTest$Title
+simple-module-tear-down                                     : EXEC domainapp.modules.simple.fixture.teardown.SimpleModuleTearDown
+create-simple-objects                                       : EXEC domainapp.modules.simple.fixture.scenario.CreateSimpleObjects
+create-simple-objects/item-1                                : Object: Foo
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.021 sec - in domainapp.modules.simple.integtests.tests.SimpleObject_IntegTest$Title
+Running domainapp.modules.simple.integtests.tests.SimpleObject_IntegTest$UpdateName
+simple-module-tear-down                                     : EXEC domainapp.modules.simple.fixture.teardown.SimpleModuleTearDown
+create-simple-objects                                       : EXEC domainapp.modules.simple.fixture.scenario.CreateSimpleObjects
+create-simple-objects/item-1                                : Object: Foo
+simple-module-tear-down                                     : EXEC domainapp.modules.simple.fixture.teardown.SimpleModuleTearDown
+create-simple-objects                                       : EXEC domainapp.modules.simple.fixture.scenario.CreateSimpleObjects
+create-simple-objects/item-1                                : Object: Foo
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.056 sec - in domainapp.modules.simple.integtests.tests.SimpleObject_IntegTest$UpdateName
+Running domainapp.modules.simple.integtests.tests.SimpleObjectMenu_IntegTest$Create
+simple-module-tear-down                                     : EXEC domainapp.modules.simple.fixture.teardown.SimpleModuleTearDown
+simple-module-tear-down                                     : EXEC domainapp.modules.simple.fixture.teardown.SimpleModuleTearDown
+09:21:21,764  [Persist              main       WARN ]  Insert of object "domainapp.modules.simple.dom.impl.SimpleObject@3d24420b" using statement "INSERT INTO "simple"."SimpleObject" ("name","notes","version") VALUES (?,?,?)" failed : integrity constraint violation: unique constraint or index violation; "SimpleObject_name_UNQ" table: "SimpleObject"
+09:21:21,764  [Persist              main       WARN ]  Insert of object "domainapp.modules.simple.dom.impl.SimpleObject@3d24420b" using statement "INSERT INTO "simple"."SimpleObject" ("name","notes","version") VALUES (?,?,?)" failed : integrity constraint violation: unique constraint or index violation; "SimpleObject_name_UNQ" table: "SimpleObject"
+09:21:21,764  [Persist              main       WARN ]  Insert of object "domainapp.modules.simple.dom.impl.SimpleObject@3d24420b" using statement "INSERT INTO "simple"."SimpleObject" ("name","notes","version") VALUES (?,?,?)" failed : integrity constraint violation: unique constraint or index violation; "SimpleObject_name_UNQ" table: "SimpleObject"
+09:21:21,765  [IsisTransaction      main       INFO ]  abort transaction IsisTransaction@3c0e00a8[state=MUST_ABORT,commands=0]
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.048 sec - in domainapp.modules.simple.integtests.tests.SimpleObjectMenu_IntegTest$Create
+Running domainapp.modules.simple.integtests.tests.SimpleObjectMenu_IntegTest$ListAll
+simple-module-tear-down                                     : EXEC domainapp.modules.simple.fixture.teardown.SimpleModuleTearDown
+create-simple-objects                                       : EXEC domainapp.modules.simple.fixture.scenario.CreateSimpleObjects
+create-simple-objects/item-1                                : Object: Foo
+create-simple-objects/item-2                                : Object: Bar
+create-simple-objects/item-3                                : Object: Baz
+simple-module-tear-down                                     : EXEC domainapp.modules.simple.fixture.teardown.SimpleModuleTearDown
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.034 sec - in domainapp.modules.simple.integtests.tests.SimpleObjectMenu_IntegTest$ListAll
+09:21:21,815  [ServiceInitializer   Thread-0   INFO ]  calling @PreDestroy on all domain services
+09:21:21,838  [SpecificationLoader  Thread-0   INFO ]  shutting down org.apache.isis.core.metamodel.specloader.SpecificationLoader@6c6333cd
+
+Results :
+
+Tests run: 11, Failures: 0, Errors: 0, Skipped: 0
+
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.19.1:test (integ-bddspecs) @ ziemozi-module-simple ---
+[INFO] 
+[INFO] --- maven-install-plugin:2.5.1:install (default-install) @ ziemozi-module-simple ---
+[INFO] Installing /Users/jamesagada/Development/isis/ziemozi/module-simple/target/ziemozi-module-simple-1.0-SNAPSHOT.jar to /Users/jamesagada/.m2/repository/com/ziem/ziemozi-module-simple/1.0-SNAPSHOT/ziemozi-module-simple-1.0-SNAPSHOT.jar
+[INFO] Installing /Users/jamesagada/Development/isis/ziemozi/module-simple/pom.xml to /Users/jamesagada/.m2/repository/com/ziem/ziemozi-module-simple/1.0-SNAPSHOT/ziemozi-module-simple-1.0-SNAPSHOT.pom
+[INFO] Installing /Users/jamesagada/Development/isis/ziemozi/module-simple/target/ziemozi-module-simple-1.0-SNAPSHOT-tests.jar to /Users/jamesagada/.m2/repository/com/ziem/ziemozi-module-simple/1.0-SNAPSHOT/ziemozi-module-simple-1.0-SNAPSHOT-tests.jar
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building SimpleApp Ziem Module 1.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ ziemozi-module-ziem ---
+[INFO] Deleting /Users/jamesagada/Development/isis/ziemozi/module-ziem/target
+[INFO] 
+[INFO] --- maven-enforcer-plugin:1.4.1:enforce (validate-enforce) @ ziemozi-module-ziem ---
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ ziemozi-module-ziem ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /Users/jamesagada/Development/isis/ziemozi/module-ziem/src/main/resources
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ ziemozi-module-ziem ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 10 source files to /Users/jamesagada/Development/isis/ziemozi/module-ziem/target/classes
+[INFO] -------------------------------------------------------------
+[WARNING] COMPILATION WARNING : 
+[INFO] -------------------------------------------------------------
+[WARNING] /Users/jamesagada/Development/isis/ziemozi/module-ziem/src/main/java/domainapp/modules/ziem/dom/impl/ZiemObject copy.java: /Users/jamesagada/Development/isis/ziemozi/module-ziem/src/main/java/domainapp/modules/ziem/dom/impl/ZiemObject copy.java uses or overrides a deprecated API.
+[WARNING] /Users/jamesagada/Development/isis/ziemozi/module-ziem/src/main/java/domainapp/modules/ziem/dom/impl/ZiemObject copy.java: Recompile with -Xlint:deprecation for details.
+[INFO] 2 warnings 
+[INFO] -------------------------------------------------------------
+[INFO] -------------------------------------------------------------
+[ERROR] COMPILATION ERROR : 
+[INFO] -------------------------------------------------------------
+[ERROR] /Users/jamesagada/Development/isis/ziemozi/module-ziem/src/main/java/domainapp/modules/ziem/dom/impl/ZiemObject copy.java:[61,8] class ZiemObject is public, should be declared in a file named ZiemObject.java
+[ERROR] /Users/jamesagada/Development/isis/ziemozi/module-ziem/src/main/java/domainapp/modules/ziem/dom/impl/ZiemObject.java:[61,8] duplicate class: domainapp.modules.ziem.dom.impl.ZiemObject
+[ERROR] /Users/jamesagada/Development/isis/ziemozi/module-ziem/src/main/java/domainapp/modules/ziem/dom/impl/ZiemObject copy.java:[64,9] cannot find symbol
+  symbol:   method setName(java.lang.String)
+  location: class domainapp.modules.ziem.dom.impl.ZiemObject
+[ERROR] /Users/jamesagada/Development/isis/ziemozi/module-ziem/src/main/java/domainapp/modules/ziem/dom/impl/ZiemObject copy.java:[90,9] cannot find symbol
+  symbol:   method setName(java.lang.String)
+  location: class domainapp.modules.ziem.dom.impl.ZiemObject
+[ERROR] /Users/jamesagada/Development/isis/ziemozi/module-ziem/src/main/java/domainapp/modules/ziem/dom/impl/ZiemObject copy.java:[95,16] cannot find symbol
+  symbol:   method getName()
+  location: class domainapp.modules.ziem.dom.impl.ZiemObject
+[ERROR] /Users/jamesagada/Development/isis/ziemozi/module-ziem/src/main/java/domainapp/modules/ziem/fixture/scenario/ZiemObjectData.java:[29,8] constructor ZiemObjectData in enum domainapp.modules.ziem.fixture.scenario.ZiemObjectData cannot be applied to given types;
+  required: no arguments
+  found: java.lang.String
+  reason: actual and formal argument lists differ in length
+[ERROR] /Users/jamesagada/Development/isis/ziemozi/module-ziem/src/main/java/domainapp/modules/ziem/fixture/scenario/ZiemObjectData.java:[30,8] constructor ZiemObjectData in enum domainapp.modules.ziem.fixture.scenario.ZiemObjectData cannot be applied to given types;
+  required: no arguments
+  found: java.lang.String
+  reason: actual and formal argument lists differ in length
+[ERROR] /Users/jamesagada/Development/isis/ziemozi/module-ziem/src/main/java/domainapp/modules/ziem/fixture/scenario/ZiemObjectData.java:[31,8] constructor ZiemObjectData in enum domainapp.modules.ziem.fixture.scenario.ZiemObjectData cannot be applied to given types;
+  required: no arguments
+  found: java.lang.String
+  reason: actual and formal argument lists differ in length
+[ERROR] /Users/jamesagada/Development/isis/ziemozi/module-ziem/src/main/java/domainapp/modules/ziem/fixture/scenario/ZiemObjectData.java:[32,10] constructor ZiemObjectData in enum domainapp.modules.ziem.fixture.scenario.ZiemObjectData cannot be applied to given types;
+  required: no arguments
+  found: java.lang.String
+  reason: actual and formal argument lists differ in length
+[ERROR] /Users/jamesagada/Development/isis/ziemozi/module-ziem/src/main/java/domainapp/modules/ziem/fixture/scenario/ZiemObjectData.java:[33,10] constructor ZiemObjectData in enum domainapp.modules.ziem.fixture.scenario.ZiemObjectData cannot be applied to given types;
+  required: no arguments
+  found: java.lang.String
+  reason: actual and formal argument lists differ in length
+[ERROR] /Users/jamesagada/Development/isis/ziemozi/module-ziem/src/main/java/domainapp/modules/ziem/fixture/scenario/ZiemObjectData.java:[34,9] constructor ZiemObjectData in enum domainapp.modules.ziem.fixture.scenario.ZiemObjectData cannot be applied to given types;
+  required: no arguments
+  found: java.lang.String
+  reason: actual and formal argument lists differ in length
+[ERROR] /Users/jamesagada/Development/isis/ziemozi/module-ziem/src/main/java/domainapp/modules/ziem/fixture/scenario/ZiemObjectData.java:[35,8] constructor ZiemObjectData in enum domainapp.modules.ziem.fixture.scenario.ZiemObjectData cannot be applied to given types;
+  required: no arguments
+  found: java.lang.String
+  reason: actual and formal argument lists differ in length
+[ERROR] /Users/jamesagada/Development/isis/ziemozi/module-ziem/src/main/java/domainapp/modules/ziem/fixture/scenario/ZiemObjectData.java:[36,8] constructor ZiemObjectData in enum domainapp.modules.ziem.fixture.scenario.ZiemObjectData cannot be applied to given types;
+  required: no arguments
+  found: java.lang.String
+  reason: actual and formal argument lists differ in length
+[ERROR] /Users/jamesagada/Development/isis/ziemozi/module-ziem/src/main/java/domainapp/modules/ziem/fixture/scenario/ZiemObjectData.java:[37,9] constructor ZiemObjectData in enum domainapp.modules.ziem.fixture.scenario.ZiemObjectData cannot be applied to given types;
+  required: no arguments
+  found: java.lang.String
+  reason: actual and formal argument lists differ in length
+[ERROR] /Users/jamesagada/Development/isis/ziemozi/module-ziem/src/main/java/domainapp/modules/ziem/fixture/scenario/ZiemObjectData.java:[38,8] constructor ZiemObjectData in enum domainapp.modules.ziem.fixture.scenario.ZiemObjectData cannot be applied to given types;
+  required: no arguments
+  found: java.lang.String
+  reason: actual and formal argument lists differ in length
+[INFO] 15 errors 
+[INFO] -------------------------------------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary:
+[INFO] 
+[INFO] SimpleApp Parent ................................... SUCCESS [  0.527 s]
+[INFO] SimpleApp Simple Module ............................ SUCCESS [ 14.300 s]
+[INFO] SimpleApp Ziem Module .............................. FAILURE [  0.222 s]
+[INFO] SimpleApp Application .............................. SKIPPED
+[INFO] SimpleApp Webapp ................................... SKIPPED
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 15.621 s
+[INFO] Finished at: 2017-08-26T09:21:22+01:00
+[INFO] Final Memory: 51M/494M
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.1:compile (default-compile) on project ziemozi-module-ziem: Compilation failure: Compilation failure:
+[ERROR] /Users/jamesagada/Development/isis/ziemozi/module-ziem/src/main/java/domainapp/modules/ziem/dom/impl/ZiemObject copy.java:[61,8] class ZiemObject is public, should be declared in a file named ZiemObject.java
+[ERROR] /Users/jamesagada/Development/isis/ziemozi/module-ziem/src/main/java/domainapp/modules/ziem/dom/impl/ZiemObject.java:[61,8] duplicate class: domainapp.modules.ziem.dom.impl.ZiemObject
+[ERROR] /Users/jamesagada/Development/isis/ziemozi/module-ziem/src/main/java/domainapp/modules/ziem/dom/impl/ZiemObject copy.java:[64,9] cannot find symbol
+[ERROR] symbol:   method setName(java.lang.String)
+[ERROR] location: class domainapp.modules.ziem.dom.impl.ZiemObject
+[ERROR] /Users/jamesagada/Development/isis/ziemozi/module-ziem/src/main/java/domainapp/modules/ziem/dom/impl/ZiemObject copy.java:[90,9] cannot find symbol
+[ERROR] symbol:   method setName(java.lang.String)
+[ERROR] location: class domainapp.modules.ziem.dom.impl.ZiemObject
+[ERROR] /Users/jamesagada/Development/isis/ziemozi/module-ziem/src/main/java/domainapp/modules/ziem/dom/impl/ZiemObject copy.java:[95,16] cannot find symbol
+[ERROR] symbol:   method getName()
+[ERROR] location: class domainapp.modules.ziem.dom.impl.ZiemObject
+[ERROR] /Users/jamesagada/Development/isis/ziemozi/module-ziem/src/main/java/domainapp/modules/ziem/fixture/scenario/ZiemObjectData.java:[29,8] constructor ZiemObjectData in enum domainapp.modules.ziem.fixture.scenario.ZiemObjectData cannot be applied to given types;
+[ERROR] required: no arguments
+[ERROR] found: java.lang.String
+[ERROR] reason: actual and formal argument lists differ in length
+[ERROR] /Users/jamesagada/Development/isis/ziemozi/module-ziem/src/main/java/domainapp/modules/ziem/fixture/scenario/ZiemObjectData.java:[30,8] constructor ZiemObjectData in enum domainapp.modules.ziem.fixture.scenario.ZiemObjectData cannot be applied to given types;
+[ERROR] required: no arguments
+[ERROR] found: java.lang.String
+[ERROR] reason: actual and formal argument lists differ in length
+[ERROR] /Users/jamesagada/Development/isis/ziemozi/module-ziem/src/main/java/domainapp/modules/ziem/fixture/scenario/ZiemObjectData.java:[31,8] constructor ZiemObjectData in enum domainapp.modules.ziem.fixture.scenario.ZiemObjectData cannot be applied to given types;
+[ERROR] required: no arguments
+[ERROR] found: java.lang.String
+[ERROR] reason: actual and formal argument lists differ in length
+[ERROR] /Users/jamesagada/Development/isis/ziemozi/module-ziem/src/main/java/domainapp/modules/ziem/fixture/scenario/ZiemObjectData.java:[32,10] constructor ZiemObjectData in enum domainapp.modules.ziem.fixture.scenario.ZiemObjectData cannot be applied to given types;
+[ERROR] required: no arguments
+[ERROR] found: java.lang.String
+[ERROR] reason: actual and formal argument lists differ in length
+[ERROR] /Users/jamesagada/Development/isis/ziemozi/module-ziem/src/main/java/domainapp/modules/ziem/fixture/scenario/ZiemObjectData.java:[33,10] constructor ZiemObjectData in enum domainapp.modules.ziem.fixture.scenario.ZiemObjectData cannot be applied to given types;
+[ERROR] required: no arguments
+[ERROR] found: java.lang.String
+[ERROR] reason: actual and formal argument lists differ in length
+[ERROR] /Users/jamesagada/Development/isis/ziemozi/module-ziem/src/main/java/domainapp/modules/ziem/fixture/scenario/ZiemObjectData.java:[34,9] constructor ZiemObjectData in enum domainapp.modules.ziem.fixture.scenario.ZiemObjectData cannot be applied to given types;
+[ERROR] required: no arguments
+[ERROR] found: java.lang.String
+[ERROR] reason: actual and formal argument lists differ in length
+[ERROR] /Users/jamesagada/Development/isis/ziemozi/module-ziem/src/main/java/domainapp/modules/ziem/fixture/scenario/ZiemObjectData.java:[35,8] constructor ZiemObjectData in enum domainapp.modules.ziem.fixture.scenario.ZiemObjectData cannot be applied to given types;
+[ERROR] required: no arguments
+[ERROR] found: java.lang.String
+[ERROR] reason: actual and formal argument lists differ in length
+[ERROR] /Users/jamesagada/Development/isis/ziemozi/module-ziem/src/main/java/domainapp/modules/ziem/fixture/scenario/ZiemObjectData.java:[36,8] constructor ZiemObjectData in enum domainapp.modules.ziem.fixture.scenario.ZiemObjectData cannot be applied to given types;
+[ERROR] required: no arguments
+[ERROR] found: java.lang.String
+[ERROR] reason: actual and formal argument lists differ in length
+[ERROR] /Users/jamesagada/Development/isis/ziemozi/module-ziem/src/main/java/domainapp/modules/ziem/fixture/scenario/ZiemObjectData.java:[37,9] constructor ZiemObjectData in enum domainapp.modules.ziem.fixture.scenario.ZiemObjectData cannot be applied to given types;
+[ERROR] required: no arguments
+[ERROR] found: java.lang.String
+[ERROR] reason: actual and formal argument lists differ in length
+[ERROR] /Users/jamesagada/Development/isis/ziemozi/module-ziem/src/main/java/domainapp/modules/ziem/fixture/scenario/ZiemObjectData.java:[38,8] constructor ZiemObjectData in enum domainapp.modules.ziem.fixture.scenario.ZiemObjectData cannot be applied to given types;
+[ERROR] required: no arguments
+[ERROR] found: java.lang.String
+[ERROR] reason: actual and formal argument lists differ in length
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+[ERROR] 
+[ERROR] After correcting the problems, you can resume the build with the command
+[ERROR]   mvn <goals> -rf :ziemozi-module-ziem
